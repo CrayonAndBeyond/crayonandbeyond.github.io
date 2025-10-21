@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crayon & Beyond - Activity books for kids</title>
+    <meta
+      name="description"
+      content="Professional activity books, activity cards, routine boards and other educational content for children. Explore my portfolio of digital and printable learning materials."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        line-height: 1.6;
+        color: #334155;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        scroll-behavior: smooth;
+        box-sizing: border-box;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(248, 250, 252, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #3b82f6;
+      }
+
+      .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .logo-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #475569;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        font-weight: 500;
+      }
+
+      .nav-links a:hover {
+        color: #3b82f6;
+      }
+
+      /* Hero Section */
+      .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: linear-gradient(
+          135deg,
+          #ff6b6b 0%,
+          #feca57 15%,
+          #48dbfb 30%,
+          #ff9ff3 45%,
+          #54a0ff 60%,
+          #5f27cd 75%,
+          #00d2d3 90%,
+          #ff9ff3 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(1px);
+      }
+
+      .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.5" fill="%23ffffff" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+        opacity: 0.4;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .brand-logo {
+        margin-bottom: 2rem;
+      }
+
+      .brand-icon {
+        width: 380px;
+        height: 380px;
+        background: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        animation: logoFloat 3s ease-in-out infinite;
+        overflow: hidden;
+      }
+
+      .brand-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+
+      @keyframes logoFloat {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .hero .subtitle {
+        font-size: 1.5rem;
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        font-weight: 300;
+      }
+
+      .hero .tagline {
+        font-size: 1.1rem;
+        color: #475569;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        line-height: 1.7;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 0;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+
+      section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #1e293b;
+      }
+
+      /* About Section */
+      .about {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(241, 220, 194, 0.911));
+      }
+
+      .about-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .about p {
+        font-size: 1.2rem;
+        color: #475569;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .about ul {
+        margin-top: 2rem;
+        padding-left: 1.5rem;
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .about li {
+        margin-bottom: 0.8rem;
+        color: #64748b;
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      /* Projects Section */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .project-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border-color: rgba(59, 130, 246, 0.3);
+      }
+
+      .project-image {
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        font-size: 0.9rem;
+        border: 2px dashed #cbd5e1;
+        overflow: hidden;
+      }
+
+      .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .project-card h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #1e293b;
+      }
+
+      .project-card p {
+        color: #64748b;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .project-link:hover {
+        color: #2563eb;
+      }
+
+      /* Project Preview */
+      .project-preview {
+        display: none;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 2rem;
+        margin-top: 2rem;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-preview.active {
+        display: block;
+        animation: fadeInUp 0.5s ease-out;
+      }
+
+      .preview-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .preview-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #1e293b;
+      }
+
+      .close-preview {
+        background: #ef4444;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .close-preview:hover {
+        background: #dc2626;
+        transform: translateY(-1px);
+      }
+
+      .preview-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .preview-image {
+        width: 100%;
+        max-width: 200px;
+        height: 280px;
+        background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #64748b;
+        font-size: 0.9rem;
+        border: 2px dashed #cbd5e1;
+        overflow: hidden;
+        margin: 0 auto;
+      }
+
+      .preview-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .preview-description {
+        color: #475569;
+        line-height: 1.7;
+        font-size: 1.1rem;
+      }
+
+      .preview-description ul {
+        margin-top: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      .preview-description li {
+        margin-bottom: 0.5rem;
+        color: #64748b;
+      }
+
+      .projects-grid.preview-mode .project-card:not(.active) {
+        display: none;
+      }
+
+      .projects-grid.preview-mode .project-card.active {
+        grid-column: 1 / -1;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: linear-gradient(
+          135deg,
+          #667eea 0%,
+          #764ba2 25%,
+          #f093fb 50%,
+          #f5576c 75%,
+          #4facfe 100%
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(1px);
+      }
+
+      .contact-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .contact-form {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 3rem;
+        margin-top: 3rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .form-group {
+        margin-bottom: 2rem;
+        text-align: left;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #374151;
+        font-size: 1rem;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        background: white;
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      .submit-button {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        border: none;
+        padding: 1rem 3rem;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+      }
+
+      .submit-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+      }
+
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .contact-item {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 2rem;
+        border-radius: 15px;
+        text-align: center;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      .contact-item h4 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .contact-item p {
+        color: #64748b;
+        line-height: 1.6;
+      }
+
+      .contact-item a {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .contact-item a:hover {
+        color: #2563eb;
+      }
+
+      /* Footer */
+      footer {
+        background: rgba(248, 250, 252, 0.9);
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid rgba(226, 232, 240, 0.8);
+      }
+
+      footer p {
+        color: #64748b;
+        font-size: 0.9rem;
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1.2rem;
+        }
+
+        .container {
+          padding: 0 1rem;
+        }
+
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        section {
+          padding: 3rem 0;
+        }
+
+        .preview-images {
+          grid-template-columns: 1fr;
+        }
+
+        .preview-header {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .project-card {
+          padding: 1.5rem;
+        }
+
+        .project-preview {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="round-logo.png" alt="Brand Logo" />
+          </div>
+          <span>Crayon & Beyond</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-content">
+          <div class="brand-logo">
+            <div class="brand-icon"><img src="round-logo.png" alt="Brand Logo" /></div>
+          </div>
+          <h1>Where Education Meets Imagination</h1>
+          <p class="tagline">
+            At Crayon & Beyond, we design engaging, educational digital and printable activity books
+            that spark creativity and learning in children. Our goal is to make learning fun and
+            accessible for young minds.
+          </p>
+          <a href="#projects" class="cta-button">View projects</a>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h2 class="section-title">About me</h2>
+          <div class="about-content">
+            <p>
+              Hello, my name is Cassandra and in my day-to-day work, I specialize in software
+              testing and have a deep passion for technology. Since becoming a mother, I've
+              discovered how to merge my technical expertise with my hobbies, developing digital and
+              printable activity books and other educational materials that blend learning and play.
+              I'm committed to creating quality educational content that's accessible to families
+              everywhere.
+            </p>
+            <p>
+              I believe that the best learning happens when children are engaged and having fun.
+              Each project I create is carefully crafted to balance educational value with
+              entertainment, ensuring that young learners stay motivated and excited about
+              discovering new concepts.
+            </p>
+            <p>📚 My activity books are perfect for:</p>
+            <ul>
+              <li>Home learning and educational play</li>
+              <li>Screen-free creative time</li>
+              <li>Preschool and early elementary learners</li>
+              <li>Rainy day activities</li>
+              <li>A creative gift for young learners</li>
+              <li>Easy to print at home, no special materials needed</li>
+            </ul>
+            <p>Versatile & Customizable Materials</p>
+            <p>🇬🇧 🇷🇴 Available in English & Romanian</p>
+            <p>
+              All materials are designed for flexibility. Use them digitally on your phone or
+              tablet, or print them at home with no special equipment required.
+            </p>
+            <p>🤸‍♀️ Need something personalized?</p>
+            <p>
+              Every material can be customized to fit your child's specific needs and interests.
+            </p>
+            <p>💡 Have a unique idea?</p>
+            <p>
+              I'd love to bring it to life! Simply share your concept and requirements, and I'll
+              create custom educational materials tailored just for you.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid" id="projectsGrid">
+            <div class="project-card" data-project="alphabet">
+              <div class="project-image">
+                <span><img src="img/alphabet-cover.jpg" alt="Learning letters cover" /></span>
+              </div>
+              <h3>Learning letters</h3>
+              <p>
+                Combine learning and creativity with this colorful alphabet activity book! Each page
+                features a large letter surrounded by illustrations of words beginning with that
+                letter, ready for your child to color. A fun, interactive way to master the alphabet
+                while developing fine motor skills and building vocabulary.
+              </p>
+              <a href="#" class="project-link" onclick="showPreview('alphabet')">View Project →</a>
+
+              <div class="project-preview" id="preview-alphabet">
+                <div class="preview-header">
+                  <h3 class="preview-title">Learning letters - Preview</h3>
+                  <button class="close-preview" onclick="closePreview('alphabet')">Close</button>
+                </div>
+                <div class="preview-images">
+                  <div class="preview-image">
+                    <span><img src="img/alphabet-1.jpg" alt="Learning letters page 1" /></span>
+                  </div>
+                  <div class="preview-image">
+                    <span><img src="img/alphabet-2.jpg" alt="Learning letters page 2" /></span>
+                  </div>
+                </div>
+                <div class="preview-description">
+                  <p>
+                    Discover an engaging way to introduce your child to the alphabet. This
+                    interactive coloring activity book combines creative fun with early literacy
+                    learning. Each page features a bold letter in the center, surrounded by colorful
+                    illustrations of words that start with that letter. Perfect for children to
+                    color, learn, and explore new vocabulary all at once.
+                  </p>
+                  <p>Why kids love it:</p>
+                  <ul>
+                    <li>Helps reinforce letter recognition and phonics</li>
+                    <li>Encourages fine motor skill development through coloring</li>
+                    <li>Makes learning the alphabet fun and interactive</li>
+                    <li>Ideal for preschool and early elementary ages</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-project="math">
+              <div class="project-image">
+                <span><img src="img/numbers-cover.jpg" alt="Learning letters cover" /></span>
+              </div>
+              <h3>Learning numbers</h3>
+              <p>
+                Explore numbers in a fun, interactive way with this engaging coloring activity book.
+                Each page is packed with multiple learning activities designed to build number
+                recognition and counting skills. Each page offers a variety of engaging activities,
+                all designed for coloring and making learning numbers an adventure!
+              </p>
+              <a href="#" class="project-link" onclick="showPreview('math')">View Project →</a>
+
+              <div class="project-preview" id="preview-math">
+                <div class="preview-header">
+                  <h3 class="preview-title">Learning numbers - Preview</h3>
+                  <button class="close-preview" onclick="closePreview('math')">Close</button>
+                </div>
+                <div class="preview-images">
+                  <div class="preview-image">
+                    <span><img src="img/numbers-1.jpg" alt="Learning letters page 1" /></span>
+                  </div>
+                  <div class="preview-image">
+                    <span><img src="img/numbers-2.jpg" alt="Learning letters page 2" /></span>
+                  </div>
+                </div>
+                <div class="preview-description">
+                  <p>Children will:</p>
+                  <ul>
+                    <li>
+                      Spot & Circle - Find the correct number hidden among other numbers on the page
+                    </li>
+                    <li>
+                      Trace & Learn - Practice writing numbers with guided tracing exercises, seeing
+                      both the numeral and its written word form
+                    </li>
+                    <li>
+                      Count & Color - Complete fun counting challenges like "How many butterflies?"
+                      and matching activities where they identify objects that match each number
+                    </li>
+                    <li>Color & Create - Bring every page to life with colors</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-project="roadFun">
+              <div class="project-image">
+                <span><img src="img/roadFun-cover.jpg" alt="Road Fun cover" /></span>
+              </div>
+              <h3>Busy Book On-The-Go!</h3>
+              <p>
+                Keep your kids entertained anywhere with this compact, printable activity book,
+                perfect for travel, waiting rooms, or car rides. Packed with engaging brain-teasing
+                activities in a small format that's easy to carry and print.
+              </p>
+              <a href="#" class="project-link" onclick="showPreview('roadFun')">View Project →</a>
+
+              <div class="project-preview" id="preview-roadFun">
+                <div class="preview-header">
+                  <h3 class="preview-title">Busy Book On-The-Go! - Preview</h3>
+                  <button class="close-preview" onclick="closePreview('roadFun')">Close</button>
+                </div>
+                <div class="preview-images">
+                  <div class="preview-image">
+                    <span><img src="img/roadFun-1.jpg" alt="Road Fun page 1" /></span>
+                  </div>
+                  <div class="preview-image">
+                    <span><img src="img/roadFun-2.jpg" alt="Road Fun page 2" /></span>
+                  </div>
+                </div>
+                <div class="preview-description">
+                  <p>
+                    Lightweight, portable, and endlessly entertaining, your secret weapon for
+                    keeping kids busy on the go!
+                  </p>
+                  <p>Activities include:</p>
+                  <ul>
+                    <li>Matching - Associate and match colors to objects and patterns</li>
+                    <li>Concept Pairing - Connect related concepts and ideas together</li>
+                    <li>Shadow Matching - Find and match objects to their correct shadows</li>
+                    <li>
+                      Spot the Odd One Out - Identify the intruder (the object that doesn't belong
+                      in the group)
+                    </li>
+                    <li>Habitat Matching - Place animals in their natural environments</li>
+                  </ul>
+                  <p>Why parents love it:</p>
+                  <ul>
+                    <li>Compact size perfect for travel, restaurants, and waiting areas</li>
+                    <li>Easy to print at home, no special materials needed</li>
+                    <li>Keeps kids focused and engaged for hours</li>
+                    <li>Develops critical thinking and observation skills</li>
+                    <li>Screen-free entertainment</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-project="backpackFun">
+              <div class="project-image">
+                <span><img src="img/backpackFun-cover.jpg" alt="Backpack fun cover" /></span>
+              </div>
+              <h3>Trace & Learn Activity Book</h3>
+              <p>
+                Develop essential pre-writing skills with this engaging tracing activity book.
+                Perfect for building fine motor control, hand-eye coordination, and confidence
+                before kids begin writing. Each page offers a variety of tracing challenges to keep
+                learning fun and varied.
+              </p>
+              <a href="#" class="project-link" onclick="showPreview('backpackFun')"
+                >View Project →</a
+              >
+
+              <div class="project-preview" id="preview-backpackFun">
+                <div class="preview-header">
+                  <h3 class="preview-title">Trace & Learn Activity Book - Preview</h3>
+                  <button class="close-preview" onclick="closePreview('backpackFun')">Close</button>
+                </div>
+                <div class="preview-images">
+                  <div class="preview-image">
+                    <span><img src="img/backpackFun-1.jpg" alt="Backpack fun page 1" /></span>
+                  </div>
+                  <div class="preview-image">
+                    <span><img src="img/backpackFun-2.jpg" alt="Backpack fun page 2" /></span>
+                  </div>
+                </div>
+                <div class="preview-description">
+                  <p>
+                    Every page is thoughtfully designed to make tracing an adventure, not a chore.
+                    Watch your child's confidence and skills grow with every completed page!
+                  </p>
+                  <p>Activities include:</p>
+                  <ul>
+                    <li>
+                      Tracing - Follow different types of lines (straight, wavy, zigzag, curved) to
+                      build pen control
+                    </li>
+                    <li>
+                      Shape & Pattern Tracing - Trace basic shapes and decorative patterns to
+                      develop precision
+                    </li>
+                    <li>
+                      Dot-to-Dot Connections - Connect numbered and non-numbered dots to reveal fun
+                      pictures
+                    </li>
+                    <li>
+                      Number Tracing - Practice writing numbers with guided dotted lines and visual
+                      guides
+                    </li>
+                    <li>
+                      Letter Tracing - Master letter formation with step-by-step tracing exercises
+                    </li>
+                  </ul>
+                  <p>Why kids love it:</p>
+                  <ul>
+                    <li>Builds confidence and independence in pre-writing skills</li>
+                    <li>Makes learning fun and interactive through varied activities</li>
+                    <li>Develops hand strength and control needed for writing</li>
+                    <li>Perfect for preschool and early elementary ages</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card" data-project="reading">
+              <div class="project-image">
+                <span><img src="img/routine-cover.jpg" alt="Routine board cover" /></span>
+              </div>
+              <h3>Routine board</h3>
+              <p>
+                Make mornings and bedtimes easier with this interactive routine board designed to
+                help children build healthy habits and independence. Each board features colorful
+                illustrations paired with clear text for every daily task, creating a visual
+                checklist that kids can follow on their own.
+              </p>
+              <a href="#" class="project-link" onclick="showPreview('routine')">View Project →</a>
+
+              <div class="project-preview" id="preview-reading">
+                <div class="preview-header">
+                  <h3 class="preview-title">Reading Adventure Quest - Preview</h3>
+                  <button class="close-preview" onclick="closePreview('routine')">Close</button>
+                </div>
+                <div class="preview-images">
+                  <div class="preview-image">
+                    <span><img src="img/routine-1.jpg" alt="Routine board 1" /></span>
+                  </div>
+                  <div class="preview-image">
+                    <span><img src="img/routine-2.jpg" alt="Routine board 2" /></span>
+                  </div>
+                </div>
+                <div class="preview-description">
+                  <p>
+                    Transform chaotic mornings and bedtimes into smooth, stress-free routines—one
+                    checkmark at a time!
+                  </p>
+                  <p>How it works:</p>
+                  <ul>
+                    <li>
+                      Visual & Text Cues - Each activity is represented with an engaging image and
+                      simple text (brush teeth, get dressed, eat etc.)
+                    </li>
+                    <li>
+                      Track Progress - Kids mark off each task as they complete it, building a sense
+                      of accomplishment
+                    </li>
+                    <li>
+                      Morning & Night Versions - Separate boards for different routines throughout
+                      the day
+                    </li>
+                    <li>
+                      Reusable Design - Perfect for laminating or placing in a frame with dry-erase
+                      markers
+                    </li>
+                  </ul>
+                  <p>Why parents love it:</p>
+                  <ul>
+                    <li>Reduces morning and bedtime struggles by giving kids clear expectations</li>
+                    <li>Builds independence and responsibility in young children</li>
+                    <li>Visual format is perfect for pre-readers and early readers</li>
+                    <li>Creates consistent routines that help kids feel secure and confident</li>
+                    <li>Makes daily tasks fun instead of frustrating</li>
+                  </ul>
+                  <p>Perfect for:</p>
+                  <ul>
+                    <li>Toddlers and preschoolers learning self-care routines</li>
+                    <li>Reducing daily power struggles</li>
+                    <li>Building time management skills early</li>
+                    <li>Creating structure in busy family mornings and evenings</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="contact-content">
+            <h2 class="section-title">Get in touch</h2>
+            <p style="font-size: 1.2rem; color: #475569; margin-bottom: 2rem; line-height: 1.8">
+              Are you interested in one of my projects? Have a custom request or question? I'd love
+              to hear from you!
+            </p>
+
+            <div class="contact-info">
+              <div class="contact-item">
+                <h4>📧 Email</h4>
+                <p>
+                  <a href="mailto:crayonbeyond@gmail.com">crayonbeyond@gmail.com</a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h4>⏰ Response Time</h4>
+                <p>I typically respond within 24 hours during business days</p>
+              </div>
+
+              <div class="contact-item">
+                <h4>🌍 Location</h4>
+                <p>Available worldwide<br />Based in Crayon & Beyond Studio</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Crayon & Beyond. All rights reserved. Crafted with passion for children's
+          education.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+        });
+      });
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      // Observe all sections
+      document.querySelectorAll('section').forEach((section) => {
+        observer.observe(section);
+      });
+
+      // Header background on scroll
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+          header.style.background = 'rgba(248, 250, 252, 0.98)';
+        } else {
+          header.style.background = 'rgba(248, 250, 252, 0.95)';
+        }
+      });
+
+      // Project card hover effects
+      document.querySelectorAll('.project-card').forEach((card) => {
+        card.addEventListener('mouseenter', function () {
+          if (!this.classList.contains('active')) {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+          }
+        });
+
+        card.addEventListener('mouseleave', function () {
+          if (!this.classList.contains('active')) {
+            this.style.transform = 'translateY(0) scale(1)';
+          }
+        });
+      });
+
+      // Project preview functionality
+      function showPreview(projectId) {
+        const projectsGrid = document.getElementById('projectsGrid');
+        const projectCard = document.querySelector(`[data-project="${projectId}"]`);
+        const preview = document.getElementById(`preview-${projectId}`);
+
+        // Hide all other cards and show only the selected one
+        document.querySelectorAll('.project-card').forEach((card) => {
+          card.classList.remove('active');
+        });
+
+        projectCard.classList.add('active');
+        projectsGrid.classList.add('preview-mode');
+
+        // Show the preview
+        document.querySelectorAll('.project-preview').forEach((p) => {
+          p.classList.remove('active');
+        });
+        preview.classList.add('active');
+
+        // Scroll to the project
+        projectCard.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      }
+
+      function closePreview(projectId) {
+        const projectsGrid = document.getElementById('projectsGrid');
+        const preview = document.getElementById(`preview-${projectId}`);
+
+        // Hide preview and show all cards
+        preview.classList.remove('active');
+        projectsGrid.classList.remove('preview-mode');
+
+        document.querySelectorAll('.project-card').forEach((card) => {
+          card.classList.remove('active');
+        });
+      }
+
+      // Add loading animation
+      window.addEventListener('load', () => {
+        document.body.style.opacity = '1';
+      });
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement('script');
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9907fd28278ac9d9',t:'MTc2MDc5MDAxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName('head')[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement('iframe');
+          a.height = 1;
+          a.width = 1;
+          a.style.position = 'absolute';
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = 'none';
+          a.style.visibility = 'hidden';
+          document.body.appendChild(a);
+          if ('loading' !== document.readyState) c();
+          else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              'loading' !== document.readyState && ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
