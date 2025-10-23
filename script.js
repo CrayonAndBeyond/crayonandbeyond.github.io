@@ -132,7 +132,7 @@ const translations = {
         id: "cards",
         title: "Activity Cards - 56 Fun Challenges!",
         description:
-          "lActivity cards with the theme: Holiday and Travel. Transform travel time and vacations into exciting learning adventures with this set of 56 engaging activity cards. Perfect for road trips, flights, hotel rooms, or exploring new destinations, these cards keep kids entertained while learning through play.",
+          "Activity cards with the theme: Holiday and Travel. Transform travel time and vacations into exciting learning adventures with this set of 56 engaging activity cards. Perfect for road trips, flights, hotel rooms, or exploring new destinations, these cards keep kids entertained while learning through play.",
         cover: "img/cards.jpg",
         previewTitle: "Activity cards - Preview",
         images: ["img/cards-1.jpg", "img/cards-2.jpg"],
@@ -376,7 +376,9 @@ function initLanguageSwitcher() {
 }
 
 function updateLanguage() {
-  // Update all elements with data-en and data-ro attributes
+  const activePreview = document.querySelector(".project-card.active");
+  const activeProjectId = activePreview ? activePreview.dataset.project : null;
+
   document.querySelectorAll("[data-en]").forEach((el) => {
     const text = el.dataset[currentLang];
     if (text) {
@@ -384,14 +386,13 @@ function updateLanguage() {
     }
   });
 
-  // Update HTML lang attribute
   document.documentElement.lang = currentLang;
 
-  // Re-render projects
   renderProjects();
 
-  // Re-initialize language switcher AFTER rendering
-  initLanguageSwitcher();
+  if (activeProjectId) {
+    showPreview(activeProjectId);
+  }
 }
 
 // Render Projects
@@ -434,6 +435,13 @@ function renderProjects() {
           <div class="preview-description">
             ${project.previewDescription}
           </div>
+          <div class="preview-footer">
+            <button class="close-preview-bottom" onclick="event.stopPropagation(); closePreview('${
+              project.id
+            }')">
+              ${currentLang === "en" ? "Close" : "Închide"}
+            </button>
+          </div>
         </div>
       </div>
     `
@@ -463,11 +471,21 @@ function showPreview(projectId) {
 
   // Scroll to the project
   setTimeout(() => {
-    projectCard.scrollIntoView({
+    // Get the dynamic height of the fixed header
+    const headerHeight = document.querySelector("header").offsetHeight;
+
+    // Calculate the correct top position
+    const targetPosition =
+      projectCard.getBoundingClientRect().top + // Element's top relative to viewport
+      window.pageYOffset - // Current page scroll Y
+      headerHeight - // Offset for the fixed header
+      10; // A 10px top margin for spacing
+
+    window.scrollTo({
+      top: targetPosition,
       behavior: "smooth",
-      block: "center",
     });
-  }, 100);
+  }, 100); // The 100ms delay is good, it lets the classes apply first
 }
 
 function closePreview(projectId) {
@@ -505,7 +523,7 @@ function initSmoothScroll() {
         }
 
         // Scroll to target
-        const headerHeight = 80;
+        const headerHeight = document.querySelector("header").offsetHeight;
         const targetPosition =
           target.getBoundingClientRect().top +
           window.pageYOffset -
