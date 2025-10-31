@@ -263,7 +263,7 @@ const translations = {
         id: "routine",
         title: "Panou rutină",
         description:
-          "Fă ritina de dimineață și seară mai ușoare cu acest panou interactiv de rutină conceput pentru a ajuta copiii să dezvolte obiceiuri sănătoase și independență. Fiecare panou prezintă ilustrații colorate cu text clar pentru fiecare sarcină zilnică, creând o listă de verificare vizuală pe care copiii o pot urma singuri.",
+          "Fă rutina de dimineață și seară mai ușoare cu acest panou interactiv de rutină conceput pentru a ajuta copiii să dezvolte obiceiuri sănătoase și independență. Fiecare panou prezintă ilustrații colorate cu text clar pentru fiecare sarcină zilnică, creând o listă de verificare vizuală pe care copiii o pot urma singuri.",
         cover: "img/routine-cover.jpg",
         previewTitle: "Panou rutină - Previzualizare",
         images: ["img/routine-1.jpg", "img/routine-2.jpg"],

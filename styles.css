@@ -197,9 +197,7 @@ nav {
 }
 
 .mobile-lang-switcher {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
+  display: none;
 }
 
 /* Hero Section */
@@ -841,16 +839,23 @@ footer p {
   }
 
   .language-switcher {
-    display: none;
+    display: flex !important;
+    margin-left: auto;
+    margin-right: 0.5rem;
   }
 
   .burger-menu {
     display: flex !important;
   }
 
-  .pricing-grid {
-    grid-template-columns: 1fr;
+  .lang-btn {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
   }
+}
+
+.pricing-grid {
+  grid-template-columns: 1fr;
 }
 
 @media (max-width: 768px) {
@@ -936,5 +941,16 @@ footer p {
 
   .amount {
     font-size: 2.5rem;
+  }
+
+  .lang-btn {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .language-switcher {
+    gap: 0.35rem;
+    margin-left: auto;
+    margin-right: 0.35rem;
   }
 }
