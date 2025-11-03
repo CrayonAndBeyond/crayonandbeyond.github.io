@@ -611,3 +611,21 @@ function initHeaderScroll() {
 window.addEventListener("load", () => {
   document.body.style.opacity = "1";
 });
+
+// Pricing item toggle
+function togglePricingDetails(item) {
+  const details = item.querySelector(".pricing-details");
+  const isActive = item.classList.contains("active");
+
+  // Close all other items
+  document.querySelectorAll(".pricing-item").forEach((i) => {
+    i.classList.remove("active");
+    i.querySelector(".pricing-details").classList.remove("show");
+  });
+
+  // Toggle current item
+  if (!isActive) {
+    item.classList.add("active");
+    details.classList.add("show");
+  }
+}
