@@ -31,6 +31,10 @@ header {
   border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
+html {
+  scroll-padding-top: 80px; /* Height of your fixed header */
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -388,6 +392,16 @@ section.visible {
   margin-top: 3rem;
 }
 
+.projects-grid.loading::before {
+  content: "⏳ Loading...";
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.2rem;
+  color: #64748b;
+  grid-column: 1 / -1;
+}
+
 .project-card {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
@@ -641,6 +655,7 @@ section.visible {
   align-items: center;
   cursor: pointer;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .pricing-title-wrapper {
@@ -648,6 +663,7 @@ section.visible {
   align-items: center;
   gap: 0.75rem;
   flex: 1;
+  min-width: 200px;
 }
 
 .pricing-title {
@@ -666,14 +682,6 @@ section.visible {
   font-weight: 600;
 }
 
-.pricing-price {
-  display: flex;
-  align-items: baseline;
-  gap: 0.25rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
 .price-amount {
   font-size: 1.75rem;
   color: #1e293b;
@@ -690,6 +698,17 @@ section.visible {
   font-weight: 600;
 }
 
+.expand-icon {
+  color: #3b82f6;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.pricing-item.active .expand-icon {
+  transform: rotate(180deg);
+}
+
 .pricing-details {
   max-height: 0;
   overflow: hidden;
@@ -698,7 +717,7 @@ section.visible {
 }
 
 .pricing-details.show {
-  max-height: 500px;
+  max-height: 800px;
   padding-top: 1rem;
 }
 
@@ -715,6 +734,7 @@ section.visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .pricing-features li {
@@ -732,15 +752,13 @@ section.visible {
   flex-shrink: 0;
 }
 
-.expand-icon {
-  color: #3b82f6;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-}
-
-.pricing-item.active .expand-icon {
-  transform: rotate(180deg);
+/* Pricing CTA Buttons */
+.pricing-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .pricing-note {
@@ -756,6 +774,138 @@ section.visible {
   color: #1e293b;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+/* Project Section Buy Buttons */
+.project-cta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(226, 232, 240, 0.8);
+  flex-wrap: wrap;
+}
+
+/* Always visible buy button in pricing */
+
+.buy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  min-width: 200px;
+}
+.buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.pricing-cta-always-visible {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-cta-always-visible .buy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  min-width: 200px;
+}
+
+.pricing-cta-always-visible .buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.buy-button-secondary {
+  background: linear-gradient(135deg, #3b82f6, #2563eb) !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3) !important;
+}
+
+.buy-button-secondary:hover {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4) !important;
+}
+
+.button-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.price-badge {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  background: rgba(59, 130, 246, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.price-badge .price-amount {
+  font-size: 1.5rem;
+}
+
+.price-badge .price-currency {
+  font-size: 0.9rem;
+  color: #3b82f6;
+}
+
+.security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+}
+
+.security-icon {
+  color: #10b981;
+}
+
+.security-message {
+  flex-direction: row;
+  text-align: left;
+  align-items: flex-start;
+  padding: 1rem 1.25rem;
+}
+
+.security-message .security-icon {
+  font-size: 1.5rem;
+  margin-top: 0.1rem;
 }
 
 /* Contact Section */
@@ -946,8 +1096,26 @@ footer p {
     justify-content: space-between;
   }
 
-  .pricing-price {
-    align-self: flex-start;
+  .pricing-features {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-item {
+    padding: 1.25rem 0;
+  }
+
+  .pricing-header {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .pricing-title-wrapper {
+    width: auto;
+    flex: 1;
+  }
+
+  .expand-icon {
+    order: 3;
   }
 
   .pricing-features {
@@ -956,6 +1124,43 @@ footer p {
 
   .pricing-item {
     padding: 1.25rem 0;
+  }
+
+  .pricing-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .buy-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Project CTA mobile */
+  .project-cta {
+    flex-direction: column;
+  }
+
+  /* .security-message {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+  }
+
+  .security-message .security-icon {
+    font-size: 1.5rem;
+    margin-top: 0.1rem;
+  } */
+
+  .pricing-cta-always-visible .buy-button {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .coming-soon-badge {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -1023,5 +1228,90 @@ footer p {
 
   .pricing-features li {
     font-size: 0.85rem;
+  }
+
+  .pricing-title {
+    font-size: 1.1rem;
+  }
+
+  .price-amount {
+    font-size: 1.5rem;
+  }
+
+  .pricing-features li {
+    font-size: 0.85rem;
+  }
+
+  .pricing-header {
+    gap: 0.5rem;
+  }
+}
+
+/* Security message */
+.security-message {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.08),
+    rgba(5, 150, 105, 0.08)
+  );
+  border-radius: 16px;
+  border: 2px solid rgba(16, 185, 129, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.1);
+}
+
+.security-message .security-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  color: #10b981;
+}
+
+.security-message p {
+  color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(251, 146, 60, 0.1),
+    rgba(249, 115, 22, 0.1)
+  );
+  border: 2px solid rgba(251, 146, 60, 0.3);
+  border-radius: 50px;
+  font-weight: 600;
+  color: #ea580c;
+  font-size: 1.1rem;
+}
+
+.coming-soon-icon {
+  font-size: 1.5rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.coming-soon-text {
+  font-weight: 700;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
   }
 }

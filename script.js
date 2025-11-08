@@ -1,6 +1,8 @@
 // Language translations
 const translations = {
   en: {
+    currency: "EUR",
+    currencySymbol: "€",
     projects: [
       {
         id: "alphabet",
@@ -20,6 +22,7 @@ const translations = {
               <li>Ideal for preschool and early elementary ages</li>
             </ul>
           `,
+        price: "Coming soon!",
       },
       {
         id: "math",
@@ -38,6 +41,8 @@ const translations = {
               <li>Color & Create - Bring every page to life with colors</li>
             </ul>
           `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-numbers-en",
       },
       {
         id: "roadFun",
@@ -66,6 +71,8 @@ const translations = {
               <li>Screen-free entertainment</li>
             </ul>
           `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/roadtrip-fun",
       },
       {
         id: "backpackFun",
@@ -93,6 +100,8 @@ const translations = {
               <li>Perfect for preschool and early elementary ages</li>
             </ul>
           `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/backpack-fun",
       },
       {
         id: "routine",
@@ -103,7 +112,7 @@ const translations = {
         previewTitle: "Routine board - Preview",
         images: ["img/routine-1.jpg", "img/routine-2.jpg"],
         previewDescription: `
-            <p>Transform chaotic mornings and bedtimes into smooth, stress-free routines—one checkmark at a time!</p>
+            <p>Transform chaotic mornings and bedtimes into smooth, stress-free routines, one checkmark at a time!</p>
             <p>How it works:</p>
             <ul>
               <li>Visual & Text Cues - Each activity is represented with an engaging image and simple text (brush teeth, get dressed, eat etc.)</li>
@@ -127,6 +136,7 @@ const translations = {
               <li>Creating structure in busy family mornings and evenings</li>
             </ul>
           `,
+        price: "Coming soon!",
       },
       {
         id: "cards",
@@ -163,10 +173,13 @@ const translations = {
               <li>Keeping kids engaged while exploring new places</li>
             </ul>
           `,
+        price: "Coming soon!",
       },
     ],
   },
   ro: {
+    currency: "LEI",
+    currencySymbol: "LEI",
     projects: [
       {
         id: "alphabet",
@@ -186,6 +199,8 @@ const translations = {
               <li>Ideal pentru preșcolari și clasele primare</li>
             </ul>
           `,
+        price: "20",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-alphabet-ro",
       },
       {
         id: "math",
@@ -204,6 +219,8 @@ const translations = {
               <li>Colorează și Creează - Dă viață fiecărei pagini prin culori</li>
             </ul>
           `,
+        price: "20",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-numbers-ro",
       },
       {
         id: "roadFun",
@@ -232,6 +249,8 @@ const translations = {
               <li>Divertisment fără ecrane</li>
             </ul>
           `,
+        price: "20",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/roadtrip-fun-ro",
       },
       {
         id: "backpackFun",
@@ -258,6 +277,8 @@ const translations = {
               <li>Perfect pentru preșcolari și clasele primare</li>
             </ul>
           `,
+        price: "20",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/backpack-fun-ro",
       },
       {
         id: "routine",
@@ -285,6 +306,8 @@ const translations = {
               <li>Construirea independenței și responsabilităților</li>
             </ul>
           `,
+        price: "10",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/girl-routine-ro",
       },
       {
         id: "cards",
@@ -321,6 +344,8 @@ const translations = {
               <li>A ține copiii implicați în timp ce explorează locuri noi</li>
             </ul>
           `,
+        price: "15",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/activity-cards-ro",
       },
     ],
   },
@@ -379,7 +404,31 @@ function updateLanguage() {
   const activePreview = document.querySelector(".project-card.active");
   const activeProjectId = activePreview ? activePreview.dataset.project : null;
 
+  // Update all text content with data attributes
   document.querySelectorAll("[data-en]").forEach((el) => {
+    const text = el.dataset[currentLang];
+    if (text) {
+      el.textContent = text;
+    }
+  });
+
+  // Update all prices - FIXED
+  document.querySelectorAll("[data-price-en]").forEach((el) => {
+    const priceAttr = currentLang === "en" ? "priceEn" : "priceRo";
+    const price = el.dataset[priceAttr];
+    if (price) {
+      el.textContent = price;
+    }
+  });
+
+  // Update currency symbols - FIXED
+  const currency = currentLang === "en" ? "€" : "LEI";
+  document.querySelectorAll(".price-currency").forEach((el) => {
+    el.textContent = currency;
+  });
+
+  // Update button texts that include prices
+  document.querySelectorAll(".button-text[data-en]").forEach((el) => {
     const text = el.dataset[currentLang];
     if (text) {
       el.textContent = text;
@@ -407,7 +456,7 @@ function renderProjects() {
         project.id
       }" onclick="showPreview('${project.id}')">
         <div class="project-image">
-          <img src="${project.cover}" alt="${project.title}" />
+          <img src="${project.cover}" alt="${project.title}" loading="lazy" />
         </div>
         <h3>${project.title}</h3>
         <p>${project.description}</p>
@@ -426,7 +475,7 @@ function renderProjects() {
               .map(
                 (img) => `
               <div class="preview-image">
-                <img src="${img}" alt="${project.title}" />
+                <img src="${img}" alt="${project.title}" loading="lazy" />
               </div>
             `
               )
@@ -435,6 +484,54 @@ function renderProjects() {
           <div class="preview-description">
             ${project.previewDescription}
           </div>
+          
+          <div class="project-cta">
+            ${
+              project.price === "Coming soon!" || !project.gumroadUrl
+                ? `
+              <div class="coming-soon-badge">
+                <span class="coming-soon-icon">⏳</span>
+                <span class="coming-soon-text">${
+                  currentLang === "en"
+                    ? "Eglish version coming Soon!"
+                    : "În curând!"
+                }</span>
+              </div>
+            `
+                : `
+              <div class="price-badge">
+                <span class="price-amount">${project.price}</span>
+                <span class="price-currency">${
+                  currentLang === "en" ? "€" : "LEI"
+                }</span>
+              </div>
+              <a 
+                href="${project.gumroadUrl}" 
+                class="buy-button"
+                target="_blank"
+                rel="noopener noreferrer"
+                onclick="event.stopPropagation()">
+                ${currentLang === "en" ? "🛒 Buy Now" : "🛒 Cumpără Acum"}
+              </a>
+            `
+            }
+          </div>
+          
+          ${
+            project.price !== "Coming soon!" && project.gumroadUrl
+              ? `
+          <div class="security-note">
+            <span class="security-icon">🔒</span>
+            <span>${
+              currentLang === "en"
+                ? "Secure checkout via Gumroad • Instant delivery"
+                : "Plată securizată prin Gumroad • Livrare instantanee"
+            }</span>
+          </div>
+          `
+              : ""
+          }
+          
           <div class="preview-footer">
             <button class="close-preview-bottom" onclick="event.stopPropagation(); closePreview('${
               project.id
@@ -628,4 +725,9 @@ function togglePricingDetails(item) {
     item.classList.add("active");
     details.classList.add("show");
   }
+}
+
+function formatPrice(price, currency) {
+  if (price === "Coming soon!") return price;
+  return `${price} ${currency}`;
 }

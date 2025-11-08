@@ -16,7 +16,7 @@
       <nav>
         <div class="logo">
           <div class="logo-icon">
-            <img src="img/round-logo.png" alt="Brand Logo" />
+            <img src="img/round-logo.png" alt="Brand Logo" loading="lazy" />
           </div>
           <span>Crayon & Beyond</span>
         </div>
@@ -77,7 +77,7 @@
         <div class="hero-content">
           <div class="brand-logo">
             <div class="brand-icon">
-              <img src="img/round-logo.png" alt="Brand Logo" />
+              <img src="img/round-logo.png" alt="Brand Logo" loading="lazy" />
             </div>
           </div>
           <h1
@@ -225,31 +225,54 @@
           </p>
 
           <div class="pricing-list">
-            <!-- Item 1: Activity Book Digital -->
-            <div class="pricing-item" onclick="togglePricingDetails(this)">
-              <div class="pricing-header">
+            <!-- Item 1: Activity Books in English -->
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
                 <div class="pricing-title-wrapper">
                   <h3
                     class="pricing-title"
-                    data-en="Activity Book - Digital format"
-                    data-ro="Carte de Activități format digital"
+                    data-en="Activity Books in English"
+                    data-ro="Cărți de Activități în Engleză"
                   >
-                    Activity Book - Digital format
+                    Activity Books in English
                   </h3>
-                </div>
-                <div class="pricing-price">
-                  <span class="price-amount">20</span>
-                  <span class="price-currency">LEI</span>
                 </div>
                 <span class="expand-icon">▼</span>
               </div>
+
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="https://crayonandbeyond.gumroad.com/?section=hxii3z7kGLqD-405-5YOeg==#hxii3z7kGLqD-405-5YOeg=="
+                  class="buy-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="event.stopPropagation()"
+                >
+                  🛒
+                  <span data-en="Buy Now - €4" data-ro="Cumpără Acum - 20 LEI"
+                    >Buy Now - €4</span
+                  >
+                </a>
+              </div>
+
               <div class="pricing-details">
+                <p
+                  class="pricing-description"
+                  data-en="Full activity books in printable PDF format. Perfect for home learning, screen-free creative time, and educational play."
+                  data-ro="Cărți complete de activități în format PDF printabil. Perfecte pentru învățare acasă, timp creativ fără ecrane și joc educativ."
+                >
+                  Full activity books in printable PDF format. Perfect for home
+                  learning, screen-free creative time, and educational play.
+                </p>
                 <ul class="pricing-features">
                   <li
-                    data-en="Full activity book"
-                    data-ro="Carte completă de activități"
+                    data-en="Full activity books"
+                    data-ro="Cărți complete de activități"
                   >
-                    Full activity book
+                    Full activity books
                   </li>
                   <li
                     data-en="Printable PDF format"
@@ -259,7 +282,7 @@
                   </li>
                   <li
                     data-en="Available in EN & RO"
-                    data-ro="Disponibil în EN și RO"
+                    data-ro="Disponibile în EN și RO"
                   >
                     Available in EN & RO
                   </li>
@@ -273,16 +296,90 @@
               </div>
             </div>
 
-            <!-- Item 2: Bundle Pack -->
-            <div class="pricing-item" onclick="togglePricingDetails(this)">
-              <div class="pricing-header">
+            <!-- Item 2: Activity Books in Romanian -->
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
                 <div class="pricing-title-wrapper">
                   <h3
                     class="pricing-title"
-                    data-en="Bundle Pack"
-                    data-ro="Pachet"
+                    data-en="Activity Books in Romanian"
+                    data-ro="Cărți de Activități în Română"
                   >
-                    Bundle Pack
+                    Activity Books in Romanian
+                  </h3>
+                </div>
+                <span class="expand-icon">▼</span>
+              </div>
+
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="https://crayonandbeyond.gumroad.com/?section=hgFmqq4bHL6xcyHJ2ctHjg==#hgFmqq4bHL6xcyHJ2ctHjg=="
+                  class="buy-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="event.stopPropagation()"
+                >
+                  🛒
+                  <span data-en="Buy Now - €4" data-ro="Cumpără Acum - 20 LEI"
+                    >Buy Now - €4</span
+                  >
+                </a>
+              </div>
+
+              <div class="pricing-details">
+                <p
+                  class="pricing-description"
+                  data-en="Full activity books in printable PDF format. Perfect for home learning, screen-free creative time, and educational play."
+                  data-ro="Cărți complete de activități în format PDF printabil. Perfecte pentru învățare acasă, timp creativ fără ecrane și joc educativ."
+                >
+                  Full activity books in printable PDF format. Perfect for home
+                  learning, screen-free creative time, and educational play.
+                </p>
+                <ul class="pricing-features">
+                  <li
+                    data-en="Full activity books"
+                    data-ro="Cărți complete de activități"
+                  >
+                    Full activity books
+                  </li>
+                  <li
+                    data-en="Printable PDF format"
+                    data-ro="Format PDF printabil"
+                  >
+                    Printable PDF format
+                  </li>
+                  <li
+                    data-en="Available in EN & RO"
+                    data-ro="Disponibile în EN și RO"
+                  >
+                    Available in EN & RO
+                  </li>
+                  <li
+                    data-en="Instant digital delivery"
+                    data-ro="Livrare digitală instantanee"
+                  >
+                    Instant digital delivery
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Item 3: Bundle Pack RO -->
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
+                <div class="pricing-title-wrapper">
+                  <h3
+                    class="pricing-title"
+                    data-en="Bundle Pack - Romanian"
+                    data-ro="Pachet cărți - Română"
+                  >
+                    Bundle Pack - Romanian
                   </h3>
                   <span
                     class="popular-badge"
@@ -291,13 +388,32 @@
                     >Popular</span
                   >
                 </div>
-                <div class="pricing-price">
-                  <span class="price-amount">40</span>
-                  <span class="price-currency">LEI</span>
-                </div>
                 <span class="expand-icon">▼</span>
               </div>
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="https://crayonandbeyond.gumroad.com/?section=kT1IQ-rC8ISQvVpDKFwomw==#kT1IQ-rC8ISQvVpDKFwomw=="
+                  class="buy-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="event.stopPropagation()"
+                >
+                  🛒
+                  <span data-en="Buy Now - €4" data-ro="Cumpără Acum - 20 LEI"
+                    >Buy Now - €4</span
+                  >
+                </a>
+              </div>
               <div class="pricing-details">
+                <p
+                  class="pricing-description"
+                  data-en="Choose any 3 activity books and save 33% compared to buying individually. Mix and match to create the perfect collection for your child."
+                  data-ro="Alege orice 3 cărți de activități și economisește 33% față de achiziția individuală. Combină pentru a crea colecția perfectă pentru copilul tău."
+                >
+                  Choose any 3 activity books and save 33% compared to buying
+                  individually. Mix and match to create the perfect collection
+                  for your child.
+                </p>
                 <ul class="pricing-features">
                   <li
                     data-en="3 activity books of your choice"
@@ -327,80 +443,125 @@
               </div>
             </div>
 
-            <!-- Item 3: Printed Book -->
-            <div class="pricing-item" onclick="togglePricingDetails(this)">
-              <div class="pricing-header">
+            <!-- Item 3: Bundle Pack EN -->
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
                 <div class="pricing-title-wrapper">
                   <h3
                     class="pricing-title"
-                    data-en="Printed Letters/Numbers Activity Book"
-                    data-ro="Carte de Activități Litere/Cifre format fizic"
+                    data-en="Bundle Pack - English"
+                    data-ro="Pachet cărți - Engleză"
                   >
-                    Printed Letters/Numbers Activity Book
+                    Bundle Pack - English
                   </h3>
-                </div>
-                <div class="pricing-price">
-                  <span class="price-amount">30</span>
-                  <span class="price-currency">LEI</span>
+                  <span
+                    class="popular-badge"
+                    data-en="Popular"
+                    data-ro="Popular"
+                    >Popular</span
+                  >
                 </div>
                 <span class="expand-icon">▼</span>
               </div>
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="https://crayonandbeyond.gumroad.com/?section=huv05yvMHZRqy_obmAW0QQ==#huv05yvMHZRqy_obmAW0QQ=="
+                  class="buy-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="event.stopPropagation()"
+                >
+                  🛒
+                  <span data-en="Buy Now - €4" data-ro="Cumpără Acum - 20 LEI"
+                    >Buy Now - €4</span
+                  >
+                </a>
+              </div>
               <div class="pricing-details">
+                <p
+                  class="pricing-description"
+                  data-en="Choose any 3 activity books and save 33% compared to buying individually. Mix and match to create the perfect collection for your child."
+                  data-ro="Alege orice 3 cărți de activități și economisește 33% față de achiziția individuală. Combină pentru a crea colecția perfectă pentru copilul tău."
+                >
+                  Choose any 3 activity books and save 33% compared to buying
+                  individually. Mix and match to create the perfect collection
+                  for your child.
+                </p>
                 <ul class="pricing-features">
                   <li
-                    data-en="Full activity book (20-30 pages)"
-                    data-ro="Carte completă de activități (20-30 pagini)"
+                    data-en="3 activity books of your choice"
+                    data-ro="3 cărți de activități la alegere"
                   >
-                    Full activity book (20-30 pages)
+                    3 activity books of your choice
                   </li>
                   <li
-                    data-en="Printed format on thick, quality paper (120g/m2) with spiral and covers"
-                    data-ro="Format printat pe hârtie groasă de calitate (120g/mp) cu spirală și coperți"
+                    data-en="Save 33% compared to individual"
+                    data-ro="Economisești 33% față de individual"
                   >
-                    Printed format on thick, quality paper (120g/m2) with spiral
-                    and covers
+                    Save 33% compared to individual
                   </li>
                   <li
-                    data-en="Fast delivery by any chosen method"
-                    data-ro="Livrare rapidă prin orice metodă aleasă"
+                    data-en="Printable PDF format"
+                    data-ro="Format PDF printabil"
                   >
-                    Fast delivery by any chosen method
+                    Printable PDF format
                   </li>
                   <li
-                    data-en="Available in EN & RO"
-                    data-ro="Disponibil în EN și RO"
+                    data-en="Mix & match any books"
+                    data-ro="Combină orice cărți"
                   >
-                    Available in EN & RO
+                    Mix & match any bookss
                   </li>
                 </ul>
               </div>
             </div>
 
-            <!-- Item 4: Activity Cards -->
-            <div class="pricing-item" onclick="togglePricingDetails(this)">
-              <div class="pricing-header">
+            <!-- Item 4: Other educational materials RO-->
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
                 <div class="pricing-title-wrapper">
                   <h3
                     class="pricing-title"
-                    data-en="Activity cards - digital format"
-                    data-ro="Carduri de activități - format digital"
+                    data-en="Other educational materials in Romanian"
+                    data-ro="Alte materiale educaționale în română"
                   >
-                    Activity Cards - digital format
+                    Other educational materials in Romanian
                   </h3>
                 </div>
-                <div class="pricing-price">
-                  <span class="price-amount">15</span>
-                  <span class="price-currency">LEI</span>
-                </div>
                 <span class="expand-icon">▼</span>
+              </div>
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="https://crayonandbeyond.gumroad.com/?section=Tv3B_epRNR4YSaQp9ZaIjg==#Tv3B_epRNR4YSaQp9ZaIjg=="
+                  class="buy-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onclick="event.stopPropagation()"
+                >
+                  🛒
+                  <span
+                    data-en="Buy Now - From €2"
+                    data-ro="Cumpără Acum - De la 10 LEI"
+                    >Buy Now - From €2</span
+                  >
+                </a>
               </div>
               <div class="pricing-details">
                 <ul class="pricing-features">
                   <li
-                    data-en="56 Fun Challenges!"
-                    data-ro="56 Provocări Distractive!"
+                    data-en="Activity cards - 56 Fun Challenges!"
+                    data-ro="Carduri de activități - 56 Provocări Distractive!"
                   >
-                    56 Fun Challenges!
+                    Activity cards - 56 Fun Challenges!
+                  </li>
+                  <li data-en="Routine Board" data-ro="Padnou de rutină">
+                    Routine Board
                   </li>
                   <li
                     data-en="Printable PDF format"
@@ -414,19 +575,16 @@
                   >
                     Available in EN & RO
                   </li>
-                  <li
-                    data-en="Perfect for travel"
-                    data-ro="Perfect pentru călătorii"
-                  >
-                    Perfect for travel
-                  </li>
                 </ul>
               </div>
             </div>
 
             <!-- Item 5: Custom Request -->
-            <div class="pricing-item" onclick="togglePricingDetails(this)">
-              <div class="pricing-header">
+            <div class="pricing-item">
+              <div
+                class="pricing-header"
+                onclick="togglePricingDetails(this.parentElement)"
+              >
                 <div class="pricing-title-wrapper">
                   <h3
                     class="pricing-title"
@@ -436,55 +594,70 @@
                     Custom Request
                   </h3>
                 </div>
-                <div class="pricing-price">
-                  <span
-                    class="price-text"
-                    data-en="Contact for quote"
-                    data-ro="Contactează pentru preț"
-                    >Contact for quote</span
-                  >
-                </div>
                 <span class="expand-icon">▼</span>
               </div>
+              <div class="pricing-cta-always-visible">
+                <a
+                  href="#contact"
+                  class="buy-button buy-button-secondary"
+                  onclick="event.stopPropagation()"
+                >
+                  <span
+                    data-en="Contact us for quote"
+                    data-ro="Contactează-ne pentru preț"
+                  >
+                    Contact us for quote
+                  </span>
+                </a>
+              </div>
+
               <div class="pricing-details">
                 <p
                   class="pricing-description"
-                  data-en="Want something special? I create personalized activity books tailored to your child's interests, with their name included throughout. Each custom request is a unique, one-of-a-kind creation."
-                  data-ro="Vrei ceva special? Creez cărți de activități personalizate adaptate intereselor copilului tău, cu numele lor inclus. Fiecare cerere personalizată este o creație unică."
+                  data-en="Want something special? I create personalized activity books tailored to your child's interests, with their name included throughout."
+                  data-ro="Vrei ceva special? Creez cărți personalizate adaptate intereselor copilului tău, cu numele lor inclus."
                 >
                   Want something special? I create personalized activity books
                   tailored to your child's interests, with their name included
-                  throughout. Each custom request is a unique, one-of-a-kind
-                  creation.
+                  throughout.
                 </p>
                 <ul class="pricing-features">
                   <li
-                    data-en="Personalized content for your child"
-                    data-ro="Conținut personalizat pentru copilul tău"
+                    data-en="Personalized content"
+                    data-ro="Conținut personalizat"
                   >
-                    Personalized content for your child
+                    Personalized content
                   </li>
                   <li
                     data-en="Custom themes & activities"
-                    data-ro="Teme și activități personalizate"
+                    data-ro="Teme personalizate"
                   >
                     Custom themes & activities
                   </li>
                   <li
                     data-en="Your child's name included"
-                    data-ro="Numele copilului tău inclus"
+                    data-ro="Numele copilului inclus"
                   >
                     Your child's name included
                   </li>
-                  <li
-                    data-en="Unique, one-of-a-kind creation"
-                    data-ro="Creație unică"
-                  >
-                    Unique, one-of-a-kind creation
+                  <li data-en="Unique creation" data-ro="Creație unică">
+                    Unique creation
                   </li>
                 </ul>
               </div>
             </div>
+          </div>
+
+          <div class="security-message">
+            <span class="security-icon">🔒</span>
+            <p
+              data-en="All products are sold through Gumroad, a secure and trusted platform for digital products. Your payment information is protected with industry-standard encryption."
+              data-ro="Toate produsele sunt vândute prin Gumroad, o platformă sigură și de încredere pentru produse digitale. Informațiile tale de plată sunt protejate cu criptare standard din industrie."
+            >
+              All products are sold through Gumroad, a secure and trusted
+              platform for digital products. Your payment information is
+              protected with industry-standard encryption.
+            </p>
           </div>
 
           <div class="pricing-note">
@@ -538,6 +711,21 @@
                     data-ro="Vizitează pagina noastră de Facebook"
                   >
                     Visit our Facebook page
+                  </a>
+                </p>
+              </div>
+
+              <div class="contact-item">
+                <h4>📱 Instagram</h4>
+                <p>
+                  <a
+                    href="https://www.instagram.com/crayonandbeyond/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-en="Visit our Instagram page"
+                    data-ro="Vizitează pagina noastră de Instagram"
+                  >
+                    Visit our Instagram page
                   </a>
                 </p>
               </div>
