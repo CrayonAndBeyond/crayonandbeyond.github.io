@@ -1,8 +1,8 @@
 // Language translations
 const translations = {
   en: {
-    currency: "EUR",
-    currencySymbol: "€",
+    currency: "USD",
+    currencySymbol: "$",
     projects: [
       {
         id: "alphabet",
@@ -136,7 +136,7 @@ const translations = {
               <li>Creating structure in busy family mornings and evenings</li>
             </ul>
           `,
-        price: "4",
+        price: "2",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/girl-routine-en",
       },
       {
@@ -200,7 +200,7 @@ const translations = {
               <li>Ideal pentru preșcolari și clasele primare</li>
             </ul>
           `,
-        price: "20",
+        price: "17",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-alphabet-ro",
       },
       {
@@ -220,7 +220,7 @@ const translations = {
               <li>Colorează și Creează - Dă viață fiecărei pagini prin culori</li>
             </ul>
           `,
-        price: "20",
+        price: "17",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-numbers-ro",
       },
       {
@@ -250,7 +250,7 @@ const translations = {
               <li>Divertisment fără ecrane</li>
             </ul>
           `,
-        price: "20",
+        price: "17",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/roadtrip-fun-ro",
       },
       {
@@ -278,7 +278,7 @@ const translations = {
               <li>Perfect pentru preșcolari și clasele primare</li>
             </ul>
           `,
-        price: "20",
+        price: "17",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/backpack-fun-ro",
       },
       {
@@ -307,7 +307,7 @@ const translations = {
               <li>Construirea independenței și responsabilităților</li>
             </ul>
           `,
-        price: "10",
+        price: "8",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/girl-routine-ro",
       },
       {
@@ -345,7 +345,7 @@ const translations = {
               <li>A ține copiii implicați în timp ce explorează locuri noi</li>
             </ul>
           `,
-        price: "15",
+        price: "12",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/activity-cards-ro",
       },
     ],
@@ -423,7 +423,7 @@ function updateLanguage() {
   });
 
   // Update currency symbols - FIXED
-  const currency = currentLang === "en" ? "€" : "LEI";
+  const currency = currentLang === "en" ? "$" : "LEI";
   document.querySelectorAll(".price-currency").forEach((el) => {
     el.textContent = currency;
   });
@@ -503,7 +503,7 @@ function renderProjects() {
               <div class="price-badge">
                 <span class="price-amount">${project.price}</span>
                 <span class="price-currency">${
-                  currentLang === "en" ? "€" : "LEI"
+                  currentLang === "en" ? "$" : "LEI"
                 }</span>
               </div>
               <a 
