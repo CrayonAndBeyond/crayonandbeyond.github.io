@@ -29,9 +29,9 @@ const translations = {
         title: "Learning numbers",
         description:
           "Explore numbers in a fun, interactive way with this engaging coloring activity book. Each page is packed with multiple learning activities designed to build number recognition and counting skills. Each page offers a variety of engaging activities, all designed for coloring and making learning numbers an adventure!",
-        cover: "img/numbers-cover.jpg",
+        cover: "img/color-numbers-cover-en.jpg",
         previewTitle: "Learning numbers - Preview",
-        images: ["img/numbers-1.jpg", "img/numbers-2.jpg"],
+        images: ["img/color-numbers2-en.jpg", "img/color-numbers3-en.jpg"],
         previewDescription: `
             <p>Children will:</p>
             <ul>
@@ -49,9 +49,9 @@ const translations = {
         title: "Busy Book On-The-Go!",
         description:
           "Keep your kids entertained anywhere with this compact, printable activity book, perfect for travel, waiting rooms, or car rides. Packed with engaging brain-teasing activities in a small format that's easy to carry and print.",
-        cover: "img/roadFun-cover.jpg",
+        cover: "img/roadtripFun-cover.jpg",
         previewTitle: "Busy Book On-The-Go! - Preview",
-        images: ["img/roadFun-1.jpg", "img/roadFun-2.jpg"],
+        images: ["img/roadtrip-fun-3.jpg", "img/roadtrip-fun4.jpg"],
         previewDescription: `
             <p>Lightweight, portable, and endlessly entertaining, your secret weapon for keeping kids busy on the go!</p>
             <p>Activities include:</p>
@@ -79,9 +79,9 @@ const translations = {
         title: "Trace & Learn Activity Book",
         description:
           "Develop essential pre-writing skills with this engaging tracing activity book. Perfect for building fine motor control, hand-eye coordination, and confidence before kids begin writing. Each page offers a variety of tracing challenges to keep learning fun and varied.",
-        cover: "img/backpackFun-cover.jpg",
+        cover: "img/backpackFunCoverEn.jpg",
         previewTitle: "Trace & Learn Activity Book - Preview",
-        images: ["img/backpackFun-1.jpg", "img/backpackFun-2.jpg"],
+        images: ["img/backpackFun-1.jpg", "img/backpackFun-3-en.jpg"],
         previewDescription: `
             <p>Every page is thoughtfully designed to make tracing an adventure, not a chore. Watch your child's confidence and skills grow with every completed page!</p>
             <p>Activities include:</p>
@@ -108,9 +108,9 @@ const translations = {
         title: "Routine board",
         description:
           "Make mornings and bedtimes easier with this interactive routine board designed to help children build healthy habits and independence. Each board features colorful illustrations paired with clear text for every daily task, creating a visual checklist that kids can follow on their own.",
-        cover: "img/routine-cover.jpg",
+        cover: "img/girl-routine1-en.jpg",
         previewTitle: "Routine board - Preview",
-        images: ["img/routine-1.jpg", "img/routine-2.jpg"],
+        images: ["img/girl-routine1-en.jpg", "img/girl-routine2-en.jpg"],
         previewDescription: `
             <p>Transform chaotic mornings and bedtimes into smooth, stress-free routines, one checkmark at a time!</p>
             <p>How it works:</p>
@@ -136,7 +136,8 @@ const translations = {
               <li>Creating structure in busy family mornings and evenings</li>
             </ul>
           `,
-        price: "Coming soon!",
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/girl-routine-en",
       },
       {
         id: "cards",
