@@ -23,23 +23,6 @@ crayonandbeyond.github.io/
 ├── script.js           # JavaScript functionality
 ├── README.md           # This file
 └── img/                # Images folder
-    ├── favicon.ico
-    ├── round-logo.png
-    ├── alphabet-cover.jpg
-    ├── alphabet-1.jpg
-    ├── alphabet-2.jpg
-    ├── numbers-cover.jpg
-    ├── numbers-1.jpg
-    ├── numbers-2.jpg
-    ├── roadFun-cover.jpg
-    ├── roadFun-1.jpg
-    ├── roadFun-2.jpg
-    ├── backpackFun-cover.jpg
-    ├── backpackFun-1.jpg
-    ├── backpackFun-2.jpg
-    ├── routine-cover.jpg
-    ├── routine-1.jpg
-    └── routine-2.jpg
 ```
 
 ## 🚀 Getting Started
@@ -119,17 +102,6 @@ All text translations are in `script.js` under the `translations` object. Update
 - ✅ Edge (latest)
 - ✅ Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 🐛 Bug Fixes (v2.0)
-
-This version includes fixes for:
-
-- ✅ Logo cropping on mobile devices
-- ✅ Missing navigation menu on mobile (added burger menu)
-- ✅ Improved responsive design across all screen sizes
-- ✅ Removed dotted borders from images
-- ✅ Better preview layout on desktop
-- ✅ Clickable project cards
-
 ## 🌍 Language Support
 
 The website supports two languages:
@@ -172,10 +144,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📝 To-Do List
 
-- [ ] Add shopping cart functionality
-- [ ] Integrate payment gateway
-- [ ] Implement contact form backend
-- [ ] Add more animation effects
+- [ ] Implement contact form
 - [ ] Create downloadable sample PDFs
 
 ## 📧 Contact
