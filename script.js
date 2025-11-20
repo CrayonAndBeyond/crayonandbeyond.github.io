@@ -9,9 +9,9 @@ const translations = {
         title: "Learning letters",
         description:
           "Combine learning and creativity with this colorful alphabet activity book! Each page features a large letter surrounded by illustrations of words beginning with that letter, ready for your child to color. A fun, interactive way to master the alphabet while developing fine motor skills and building vocabulary.",
-        cover: "img/alphabet-cover.jpg",
+        cover: "img/alphabet-cover-en.jpg",
         previewTitle: "Learning letters - Preview",
-        images: ["img/alphabet-1.jpg", "img/alphabet-2.jpg"],
+        images: ["img/alphabet-1-en.jpg", "img/alphabet-2-en.jpg"],
         previewDescription: `
             <p>Discover an engaging way to introduce your child to the alphabet. This interactive coloring activity book combines creative fun with early literacy learning. Each page features a bold letter in the center, surrounded by colorful illustrations of words that start with that letter. Perfect for children to color, learn, and explore new vocabulary all at once.</p>
             <p>Why kids love it:</p>
@@ -22,7 +22,8 @@ const translations = {
               <li>Ideal for preschool and early elementary ages</li>
             </ul>
           `,
-        price: "Coming soon!",
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/color-alphabet-en",
       },
       {
         id: "math",
@@ -79,9 +80,9 @@ const translations = {
         title: "Trace & Learn Activity Book",
         description:
           "Develop essential pre-writing skills with this engaging tracing activity book. Perfect for building fine motor control, hand-eye coordination, and confidence before kids begin writing. Each page offers a variety of tracing challenges to keep learning fun and varied.",
-        cover: "img/backpackFunCoverEn.jpg",
+        cover: "img/backpack-fun-cover-en.jpg",
         previewTitle: "Trace & Learn Activity Book - Preview",
-        images: ["img/backpackFun-1.jpg", "img/backpackFun-3-en.jpg"],
+        images: ["img/backpack-fun1.jpg", "img/backpack-fun-en1.jpg"],
         previewDescription: `
             <p>Every page is thoughtfully designed to make tracing an adventure, not a chore. Watch your child's confidence and skills grow with every completed page!</p>
             <p>Activities include:</p>
@@ -258,9 +259,9 @@ const translations = {
         title: "Distracție în rucsac",
         description:
           "Dezvoltă abilități esențiale pentru a învăța scrisul cu această carte captivantă de trasare. Perfectă pentru dezvoltarea controlului, motricității fine și coordonarea mână-ochi. Fiecare pagină oferă o varietate de provocări de trasare pentru o învățare distractivă și variată.",
-        cover: "img/backpackFun-cover.jpg",
+        cover: "img/backpack-fun-cover-ro.jpg",
         previewTitle: "Distracție în rucsac - Previzualizare",
-        images: ["img/backpackFun-1.jpg", "img/backpackFun-2.jpg"],
+        images: ["img/backpack-fun2.jpg", "img/backpack-fun-ro2.jpg"],
         previewDescription: `
             <p>Fiecare pagină este concepută cu grijă pentru a face trasarea o aventură, nu o corvoadă. Urmărește cum încrederea și abilitățile copilului tău cresc cu fiecare pagină completată!</p>
             <p>Activitățile includ:</p>
