@@ -5,6 +5,64 @@ const translations = {
     currencySymbol: "$",
     projects: [
       {
+        id: "tiny-books-winter",
+        title:
+          "Tiny Tales of Christmas's Magic: The 9-Book Fold-Out Collection",
+        description:
+          "Dive into the amazing world of science with our cutest and most interactive collection yet! These aren't just activity pages, they are a unique series of tiny, foldable mini-books designed specifically for curious minds.",
+        cover: "img/tiny-winter-cover.jpg",
+        previewTitle: "Tiny books winter edition - Preview",
+        images: ["img/tiny-winter-1.jpg", "img/tiny-winter-2.jpg"],
+        previewDescription: `
+            <p>Each book is a single-sheet A4 printable that magically folds into an 8-panel, palm-sized book! Perfect for little hands, these books transform learning core science concepts, like life cycles, weather, and basic botany, into a hands-on adventure.</p>
+            <p>We use simple, playful language (like "WHOOSH! Fly High!" and "Bake the Christmas Magic!") and adorable visuals to make sure every stage of the life cycle is clear, memorable, and fun!</p>
+            <p>📚 This 9-Book Bundle includes:</p>
+            <ul>
+              <li>Classic Holiday How-To: How to Decorate Our Tree, Bake the Christmas Magic and How to Wait for the Big Surprise!</li>
+              <li>Winter Science & Fun: The Life Cycle of a Snowflake, How to Build a Snowman and A Reindeer's Day Out!</li>
+              <li>Bonus Pet Chaos Edition: Unique, humorous books focused on pets and holiday traditions: Cookies for Santa and friends, How to Pet-Proof Our Tree and How to Give a Surprise Gift.</li>
+            </ul>
+            <p>💡 Why Parents & Toddlers Love This Bundle::</p>
+            <ul>
+              <li>Unique 8-Panel Format: Turns one sheet of paper into a satisfying, little book with one cutting and no gluing required!</li>
+              <li>Perfect for Ages 2-4: Focuses on sequencing skills and core science vocabulary using simple, action-oriented titles.</li>
+              <li>Screen-Free & Interactive: Encourages fine motor skills through folding and engages imagination with adorable illustrations.</li>
+              <li>High-Value Learning: Get 9 unique science lessons in a single, cohesive collection.</li>
+              <li>Printable & Accessible: Download the PDF instantly and print at home!</li>
+            </ul>
+          `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/tiny-books-winter",
+      },
+      {
+        id: "tiny-books-nature",
+        title: "Tiny Tales of Nature's Magic: The 7-Book Fold-Out Collection",
+        description:
+          "Dive into the amazing world of science with our cutest and most interactive collection yet! These aren't just activity pages, they are a unique series of tiny, foldable mini-books designed specifically for curious minds.",
+        cover: "img/tiny-nature-cover.jpg",
+        previewTitle: "Tiny books nature edition - Preview",
+        images: ["img/tiny-nature-1.jpg", "img/tiny-nature-2.jpg"],
+        previewDescription: `
+            <p>Each book is a single-sheet A4 printable that magically folds into an 8-panel, palm-sized book! Perfect for little hands, these books transform learning core science concepts, like life cycles, weather, and basic botany, into a hands-on adventure.</p>
+            <p>We use simple, playful language (like "Cuddle Bug!" and "Pop! A Root!") and adorable visuals to make sure every stage of the life cycle is clear, memorable, and fun!</p>
+            <p>📚 This 7-Book Bundle includes:</p>
+            <ul>
+              <li>Life Cycles: Butterfly, Plant, Water, Frog and Bee</li>
+              <li>The World Around Us: Leaf Shape & Color Change, Fruit & Vegetable Hide-and-Seek.</li>
+            </ul>
+            <p>💡 Why Parents & Toddlers Love This Bundle::</p>
+            <ul>
+              <li>Unique 8-Panel Format: Turns one sheet of paper into a satisfying, little book with one cutting and no gluing required!</li>
+              <li>Perfect for Ages 2-4: Focuses on sequencing skills and core science vocabulary using simple, action-oriented titles.</li>
+              <li>Screen-Free & Interactive: Encourages fine motor skills through folding and engages imagination with adorable illustrations.</li>
+              <li>High-Value Learning: Get 7 unique science lessons in a single, cohesive collection.</li>
+              <li>Printable & Accessible: Download the PDF instantly and print at home!</li>
+            </ul>
+          `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/tiny-books-nature",
+      },
+      {
         id: "alphabet",
         title: "Learning letters",
         description:
@@ -177,40 +235,69 @@ const translations = {
           `,
         price: "Coming soon!",
       },
-      {
-        id: "tiny-books",
-        title: "Tiny Tales of Nature's Magic: The 7-Book Fold-Out Collection",
-        description:
-          "Dive into the amazing world of science with our cutest and most interactive collection yet! These aren't just activity pages—they are a unique series of tiny, foldable mini-books designed specifically for curious minds.",
-        cover: "img/tiny-nature-cover.jpeg",
-        previewTitle: "Activity cards - Preview",
-        images: ["img/tiny-nature-1.jpg", "img/tiny-nature-2.jpg"],
-        previewDescription: `
-            <p>Each book is a single-sheet A4 printable that magically folds into an 8-panel, palm-sized book! Perfect for little hands, these books transform learning core science concepts, like life cycles, weather, and basic botany, into a hands-on adventure.</p>
-            <p>We use simple, playful language (like "Cuddle Bug!" and "Pop! A Root!") and adorable visuals to make sure every stage of the life cycle is clear, memorable, and fun!</p>
-            <p>📚 This 7-Book Bundle includes:</p>
-            <ul>
-              <li>Life Cycles: Butterfly, Plant, Water, Frog and Bee</li>
-              <li>The World Around Us: Leaf Shape & Color Change, Fruit & Vegetable Hide-and-Seek.</li>
-            </ul>
-            <p>💡 Why Parents & Toddlers Love This Bundle::</p>
-            <ul>
-              <li>Unique 8-Panel Format: Turns one sheet of paper into a satisfying, little book with one cutting and no gluing required!</li>
-              <li>Perfect for Ages 2-4: Focuses on sequencing skills and core science vocabulary using simple, action-oriented titles.</li>
-              <li>Screen-Free & Interactive: Encourages fine motor skills through folding and engages imagination with adorable illustrations.</li>
-              <li>High-Value Learning: Get 7 unique science lessons in a single, cohesive collection.</li>
-              <li>Printable & Accessible: Download the PDF instantly and print at home!</li>
-            </ul>
-          `,
-        price: "4",
-        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/tiny-books-nature",
-      },
     ],
   },
   ro: {
     currency: "LEI",
     currencySymbol: "LEI",
     projects: [
+      {
+        id: "tiny-books-winter",
+        title:
+          "Povești Mititele - Magia Crăciunului. Colecție de 9 cărticele mici pliabile",
+        description:
+          "Pătrundeți în lumea uimitoare a științei cu cea mai drăguță și mai interactivă colecție a noastră de până acum! Acestea nu sunt doar pagini de activități, sunt o serie unică de mini-cărți mici, pliabile, concepute special pentru mințile curioase.",
+        cover: "img/tiny-winter-cover.jpg",
+        previewTitle: "Povești Mititele ediția de iarnă - Previzualizare",
+        images: ["img/tiny-winter-1.jpg", "img/tiny-winter-2.jpg"],
+        previewDescription: `
+            <p>Fiecare cărticică este o foaie A4 ce poate fi imprimată și care se pliază magic într-o carte de mărimea palmei cu 8 panouri! Perfecte pentru mânuțele mici, aceste cărți transformă învățarea conceptelor științifice de bază, precum ciclurile de viață, vremea și botanica elementară, într-o aventură practică.</p>
+            <p>Folosim un limbaj simplu și jucăuș (precum „Brum, brum!” și „Shh! Surpriza!”) și imagini adorabile pentru a ne asigura că fiecare etapă a ciclului de viață este clară, memorabilă și distractivă!</p>
+            <p>📚 Acest Pachet de 9 Cărți include:</p>
+            <ul>
+              <li>Clasice de Sărbători (Ghiduri Practice): Cum Decorăm Bradul, Coacem Magia Crăciunului și Cum Așteptăm Marea Surpriză!</li>
+              <li>Știința și Distracția Iernii: Ciclul de Viață al unui Fulg de Nea, Cum Construim un Om de Zăpadă și O Zi de Aventuri a unui Ren!</li>
+              <li>Ediția Bonus 'Haosul Animăluțelor': Cărți unice, pline de umor, axate pe animalele de companie și tradițiile de sărbători: Fursecuri pentru Moș Crăciun și prietenii, Cum ne Protejăm Bradul de Animăluțe și Cum Oferim un Cadou Surpriză.</li>
+            </ul>
+            <p>💡 De Ce Adoră Părinții și Copiii mici acest pachet:</p>
+            <ul>
+              <li>Format Unic cu 8 Panouri: Transformă o singură foaie de hârtie într-o cărticică satisfăcătoare, fără a fi nevoie de lipire, doar o singură tăietură!</li>
+              <li>Perfect pentru Vârstele 2-4 Ani: Se concentrează pe abilitățile de secvențiere și vocabularul științific de bază, folosind titluri simple, orientate spre acțiune.</li>
+              <li>Fără Ecrane și Interactiv: Încurajează motricitatea fină prin pliere și antrenează imaginația cu ilustrații adorabile.</li>
+              <li>Învățare de Înaltă Valoare: Obțineți 9 lecții unice despre sărbători și iarnă, într-o singură colecție coerentă!</li>
+              <li>Printabil și Accesibil: Descărcați PDF-ul instantaneu și imprimați acasă!</li>
+            </ul>
+          `,
+        price: "Coming soon!",
+      },
+      {
+        id: "tiny-books-nature",
+        title:
+          "Povești Mititele - Magia Naturii. Colecție de 7 cărticele mici pliabile",
+        description:
+          "Pătrundeți în lumea uimitoare a științei cu cea mai drăguță și mai interactivă colecție a noastră de până acum! Acestea nu sunt doar pagini de activități, sunt o serie unică de mini-cărți mici, pliabile, concepute special pentru mințile curioase.",
+        cover: "img/tiny-nature-cover.jpg",
+        previewTitle: "Povești Mititele - Natura - Previzualizare",
+        images: ["img/tiny-nature-1.jpg", "img/tiny-nature-2.jpg"],
+        previewDescription: `
+            <p>Fiecare cărticică este o foaie A4 ce poate fi imprimată și care se pliază magic într-o carte de mărimea palmei cu 8 panouri! Perfecte pentru mânuțele mici, aceste cărți transformă învățarea conceptelor științifice de bază, precum ciclurile de viață, vremea și botanica elementară, într-o aventură practică.</p>
+            <p>Folosim un limbaj simplu și jucăuș (precum „Gâză Pufoasă!” și „Pop! Iese Rădăcina!”) și imagini adorabile pentru a ne asigura că fiecare etapă a ciclului de viață este clară, memorabilă și distractivă!</p>
+            <p>📚 Acest Pachet de 7 Cărți include:</p>
+            <ul>
+              <li>Cicluri de Viață: Fluture, Plantă, Apă, Broască și Albină</li>
+              <li>Lumea din Jurul Nostru: Forma Frunzelor și Schimbarea Culorii, De-a v-ați ascunselea cu Fructe și Legume.</li>
+            </ul>
+            <p>💡 De Ce Adoră Părinții și Copiii mici acest pachet:</p>
+            <ul>
+              <li>Format Unic cu 8 Panouri: Transformă o singură foaie de hârtie într-o cărticică satisfăcătoare, fără a fi nevoie de lipire, doar o singură tăietură!</li>
+              <li>Perfect pentru Vârstele 2-4 Ani: Se concentrează pe abilitățile de secvențiere și vocabularul științific de bază, folosind titluri simple, orientate spre acțiune.</li>
+              <li>Fără Ecrane și Interactiv: Încurajează motricitatea fină prin pliere și antrenează imaginația cu ilustrații adorabile.</li>
+              <li>Învățare de Înaltă Valoare: Obțineți 7 lecții științifice unice într-o singură colecție coerentă.</li>
+              <li>Printabil și Accesibil: Descărcați PDF-ul instantaneu și imprimați acasă!</li>
+            </ul>
+          `,
+        price: "Coming soon!",
+      },
       {
         id: "alphabet",
         title: "Colorăm și învățăm alfabetul",
@@ -376,34 +463,6 @@ const translations = {
           `,
         price: "12",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/activity-cards-ro",
-      },
-      {
-        id: "tiny-books",
-        title:
-          "Povești Mititele - Magia Naturii. Colecție de 7 cărticele mici pliabile",
-        description:
-          "Pătrundeți în lumea uimitoare a științei cu cea mai drăguță și mai interactivă colecție a noastră de până acum! Acestea nu sunt doar pagini de activități, sunt o serie unică de mini-cărți mici, pliabile, concepute special pentru mințile curioase.",
-        cover: "img/tiny-nature-cover.jpeg",
-        previewTitle: "Cartonașe de activități - Previzualizare",
-        images: ["img/tiny-nature-1.jpg", "img/tiny-nature-2.jpg"],
-        previewDescription: `
-            <p>Fiecare cărticică este o foaie A4 ce poate fi imprimată și care se pliază magic într-o carte de mărimea palmei cu 8 panouri! Perfecte pentru mânuțele mici, aceste cărți transformă învățarea conceptelor științifice de bază, precum ciclurile de viață, vremea și botanica elementară, într-o aventură practică.</p>
-            <p>Folosim un limbaj simplu și jucăuș (precum „Gâză Pufoasă!” și „Pop! Iese Rădăcina!”) și imagini adorabile pentru a ne asigura că fiecare etapă a ciclului de viață este clară, memorabilă și distractivă!</p>
-            <p>📚 Acest Pachet de 7 Cărți include:</p>
-            <ul>
-              <li>Cicluri de Viață: Fluture, Plantă, Apă, Broască și Albină</li>
-              <li>Lumea din Jurul Nostru: Forma Frunzelor și Schimbarea Culorii, De-a v-ați ascunselea cu Fructe și Legume.</li>
-            </ul>
-            <p>💡 De Ce Adoră Părinții și Copiii mici acest pachet:</p>
-            <ul>
-              <li>Format Unic cu 8 Panouri: Transformă o singură foaie de hârtie într-o cărticică satisfăcătoare, fără a fi nevoie de lipire, doar o singură tăietură!</li>
-              <li>Perfect pentru Vârstele 2-4 Ani: Se concentrează pe abilitățile de secvențiere și vocabularul științific de bază, folosind titluri simple, orientate spre acțiune.</li>
-              <li>Fără Ecrane și Interactiv: Încurajează motricitatea fină prin pliere și antrenează imaginația cu ilustrații adorabile.</li>
-              <li>Învățare de Înaltă Valoare: Obțineți 7 lecții științifice unice într-o singură colecție coerentă.</li>
-              <li>Printabil și Accesibil: Descărcați PDF-ul instantaneu și imprimați acasă!</li>
-            </ul>
-          `,
-        price: "Coming soon!",
       },
     ],
   },
