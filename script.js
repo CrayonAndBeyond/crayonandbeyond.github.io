@@ -5,6 +5,34 @@ const translations = {
     currencySymbol: "$",
     projects: [
       {
+        id: "advent-kit",
+        title: "Advent Calendar: 24 Days of joyful fun!",
+        description:
+          "Transform your Christmas countdown into an interactive, faith-based journey! This unique kit combines 9 of our popular tiny foldable storybooks with 15 educational worksheets, offering 24 days of learning and festive surprises.",
+        cover: "img/advent-kit.jpg",
+        previewTitle: "Advent Calendar - Preview",
+        images: ["img/nativity-2.jpg", "img/tiny-winter-1.jpg"],
+        previewDescription: `
+              <p>This is more than just an activity set - it's an entire 24-day Advent Calendar experience with one special surprise to open every day from December 1st until Christmas Eve! The kit brings the story of the Nativity to life while simultaneously reinforcing essential pre-reading, numeracy, and fine motor skills.</p>
+              <p>Each Tiny Foldable Book is a single A4 sheet that magically folds (no glue needed!) into a palm-sized book with 8 panels, perfect for little hands. The worksheets are designed to be colorful, clear, and easy for children aged 2-5 to understand.</p>
+              <p>📚 This 24-Day Kit Includes:</p>
+              <ul>
+                <li>**Days 1-9: 9 Tiny Foldable Storybooks** - Each book narrates an episode of the Nativity (from the Angel's Visit to the Journey of the Magi), building vocabulary and story sequencing.</li>
+                <li>**Days 10-24: 15 Educational Worksheets** - High-quality activities that include: Number Paths, Shape Matching (The Magi's Gifts), Initial Sound Searches, Counting Stable Animals, and Visual Discrimination Games (Find the Identical Match).</li>
+              </ul>
+              <p>💡 Why Parents and Educators Love This Kit:</p>
+              <ul>
+                <li>Advent Calendar Format: Provides an engaging daily structure and keeps the excitement high for the Christmas countdown.</li>
+                <li>Faith-Focused Learning: Keeps the spiritual meaning of the holiday at the center of the activities.</li>
+                <li>Skill Development: A perfectly balanced mix of activities covering counting (1-10), shape recognition, and fine motor skills (tracing, cutting, folding).</li>
+                <li>Unique & Interactive: The foldable tiny books are an adorable collector's item and stimulate fine motor skills through folding.</li>
+                <li>Instant Printable: Download the PDF, prep your envelopes, and you have 24 days of Christmas activities ready to go!</li>
+              </ul>
+            `,
+        price: "4",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/advent-calendar",
+      },
+      {
         id: "tiny-books-winter",
         title:
           "Tiny Tales of Christmas's Magic: The 9-Book Fold-Out Collection",
@@ -31,8 +59,37 @@ const translations = {
               <li>Printable & Accessible: Download the PDF instantly and print at home!</li>
             </ul>
           `,
-        price: "4",
+        price: "2",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/tiny-books-winter",
+      },
+      {
+        id: "nativity-worksheets",
+        title: "My Little Nativity Worksheet Collection",
+        description:
+          "Make this Christmas truly meaningful with a collection of fun, engaging worksheets centered on the beautiful story of Jesus's birth! Designed specifically for toddlers and preschoolers (Ages 2-5), this printable pack combines essential early learning skills with the core Christian message of the Nativity.",
+        cover: "img/nativity-cover.jpg",
+        previewTitle: "Nativity Worksheets - Preview",
+        images: ["img/nativity-1.jpg", "img/nativity-2.jpg"],
+        previewDescription: `
+              <p>Make this Christmas truly meaningful with a collection of fun, engaging worksheets centered on the beautiful story of Jesus's birth! Designed specifically for toddlers and preschoolers (Ages 2-5), this printable pack combines essential early learning skills with the core Christian message of the Nativity.</p>
+              <p>This is the perfect resource for Sunday school teachers, Christian homeschooling parents, or anyone looking to add faith-based learning to their holiday fun!</p>
+              <p>What's Inside? 15 Pages of Joyful Learning!</p>
+              <p>This comprehensive collection includes a wide variety of activities to ensure skill progression and engagement:</p>
+              <ul>
+                <li>Early Numeracy & Shapes</li>
+                <li>Early Literacy & Fine Motor</li>
+                <li>Visual Perception & Discrimination</li>
+              </ul>
+              <p>💡 Why Choose This Collection?</p>
+              <ul>
+                <li>Faith-Focused: Every activity is themed around the Christian Nativity story, providing meaningful context for learning.</li>
+                <li>Skill-Based: Designed to reinforce core skills: counting, tracing, shape recognition, initial sounds, and fine motor control.</li>
+                <li>Age-Appropriate: Simple visuals and large print/tracing areas perfect for small hands (ages 2, 3, 4, and 5).</li>
+                <li>Printable & Reusable: Download and print as many copies as you need for endless holiday fun!</li>
+              </ul>
+            `,
+        price: "2",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/nativity-worksheets",
       },
       {
         id: "tiny-books-nature",
@@ -59,7 +116,7 @@ const translations = {
               <li>Printable & Accessible: Download the PDF instantly and print at home!</li>
             </ul>
           `,
-        price: "4",
+        price: "2",
         gumroadUrl: "https://crayonandbeyond.gumroad.com/l/tiny-books-nature",
       },
       {
@@ -242,6 +299,33 @@ const translations = {
     currencySymbol: "LEI",
     projects: [
       {
+        id: "advent-kit",
+        title: "Advent Calendar: 24 de zile vesele și distractive",
+        description:
+          "Transformați numărătoarea inversă de Crăciun într-o călătorie interactivă, bazată pe credință! Acest pachet unic combină 9 cărticele pliabile din seria noastră cu 15 fișe de lucru educative, oferind 24 de zile de surprize și învățare.",
+        cover: "img/advent-kit.jpg",
+        previewTitle: "Advent Calendar - Previzualizare",
+        images: ["img/nativity-2.jpg", "img/tiny-winter-1.jpg"],
+        previewDescription: `
+            <p>Acesta nu este doar un set de activități, ci un întreg calendar Advent cu 24 de surprize de deschis în fiecare zi, de la 1 Decembrie până în Ajunul Crăciunului! Kitul aduce la viață povestea Nașterii Domnului, întărind în același timp abilitățile esențiale de pre-citire, numerație și motricitate fină.</p>
+            <p>Fiecare Cărticel Pliabil este o foaie A4 tipărită ce se transformă printr-o pliere simplă (fără lipire) într-o carte de mărimea palmei cu 8 panouri, perfectă pentru mânuțele mici. Fișele de lucru sunt colorate și concepute pentru a fi clare și ușor de înțeles de către copiii de 2-5 ani.</p>
+        <p>📚 Acest Kit de 24 de Zile Include:</p>
+        <ul>
+          <li>**Zilele 1-9: 9 Cărticele Pliabile** - Fiecare poveste relatează un episod din Nașterea Domnului (de la Vestirea Îngerului până la Vizita Magilor), construind vocabularul și înțelegerea secvențelor.</li>
+          <li>**Zilele 10-24: 15 Fișe de Lucru Educative** - Activități de înaltă calitate, care includ: Cărarea Numerelor, Potrivirea Formelor (Cadourile Magilor), Căutarea Sunetelor Inițiale, Numărarea Animalelor din Grajd și Jocuri de Discriminare Vizuală (Găsește Potrivirea Identică).</li>
+        </ul>
+        <p>💡 De Ce Adoră Părinții și Educatorii acest Kit:</p>
+        <ul>
+          <li>Format Calendar Advent: Oferă o structură zilnică captivantă și menține entuziasmul pentru Crăciun.</li>
+          <li>Învățare Centrată pe Credință: Menține focusul pe semnificația spirituală a sărbătorii.</li>
+          <li>Dezvoltare a Abilităților: Un mix echilibrat de activități ce acoperă numărarea (1-10), recunoașterea formelor și motricitatea fină (trasare, decupare, pliere).</li>
+          <li>Unic și Interactiv: Cărticelele pliabile sunt un element de colecție adorabil și stimulează motricitatea fină prin pliere.</li>
+          <li>Printabil Instant: Descărcați PDF-ul, pregătiți plicurile și aveți gata 24 de zile de activități de Crăciun!</li>
+        </ul>
+            `,
+        price: "Coming soon!",
+      },
+      {
         id: "tiny-books-winter",
         title:
           "Povești Mititele - Magia Crăciunului. Colecție de 9 cărticele mici pliabile",
@@ -268,6 +352,34 @@ const translations = {
               <li>Printabil și Accesibil: Descărcați PDF-ul instantaneu și imprimați acasă!</li>
             </ul>
           `,
+        price: "Coming soon!",
+      },
+      {
+        id: "nativity-worksheets",
+        title: "Mica mea colecție de fișe cu Nașterea Domnului",
+        description:
+          "Faceți ca acest Crăciun să fie cu adevărat semnificativ cu o colecție de fișe de lucru distractive și captivante, centrate pe frumoasa poveste a Nașterii Domnului Isus Hristos! Conceput special pentru copiii mici și preșcolari (Vârsta 2-5 ani), acest pachet printabil combină abilitățile esențiale de învățare timpurie cu mesajul creștin fundamental al Nașterii Domnului.",
+        cover: "img/nativity-cover.jpg",
+        previewTitle: "Nativity Worksheets - Previzualizare",
+        images: ["img/nativity-1.jpg", "img/nativity-2.jpg"],
+        previewDescription: `
+            <p>Faceți ca acest Crăciun să fie cu adevărat semnificativ cu o colecție de fișe de lucru distractive și captivante, centrate pe frumoasa poveste a Nașterii Domnului Isus Hristos! Conceput special pentru copiii mici și preșcolari (Vârsta 2-5 ani), acest pachet printabil combină abilitățile esențiale de învățare timpurie cu mesajul creștin fundamental al Nașterii Domnului.</p>
+            <p>Aceasta este resursa perfectă pentru profesorii de școală duminicală, părinții creștini care fac *homeschooling* sau oricine dorește să adauge învățarea bazată pe credință la distracția de sărbători!</p>
+            <p>Ce conține? 15 Pagini de Învățare Plină de Bucurie!</p>
+            <p>Această colecție cuprinzătoare include o mare varietate de activități pentru a asigura progresul și implicarea în dezvoltarea abilităților:</p>
+            <ul>
+              <li>Motricitate Fină</li>
+              <li>Alfabet și numere </li>
+              <li>Percepție Vizuală și distingere</li>
+            </ul>
+            <p>💡 De Ce Să Alegi Această Colecție?</p>
+            <ul>
+              <li>Centrat pe Credință: Fiecare activitate este tematică în jurul poveștii creștine a Nașterii Domnului, oferind un context semnificativ pentru învățare.</li>
+              <li>Bazat pe Abilități: Conceput pentru a consolida abilitățile de bază: numărare, trasare, recunoașterea formelor, sunete inițiale și controlul motricității fine.</li>
+              <li>Potrivit Vârstei: Elemente vizuale simple și zone mari de printare/trasare, perfecte pentru mâinile mici (vârstele 2, 3, 4 și 5 ani).</li>
+              <li>Printabil și Reutilizabil: Descarcă și tipărește oricâte copii ai nevoie pentru distracție nelimitată de sărbători!</li>
+            </ul>
+            `,
         price: "Coming soon!",
       },
       {
