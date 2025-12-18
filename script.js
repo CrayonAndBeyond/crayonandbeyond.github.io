@@ -960,3 +960,64 @@ function formatPrice(price, currency) {
   if (price === "Coming soon!") return price;
   return `${price} ${currency}`;
 }
+
+// Learning corner functionality for API testing
+// --- Word List for Random Selection (keep this simple and educational) ---
+const simpleWords = [
+  "curious",
+  "imagine",
+  "explore",
+  "create",
+  "bright",
+  "story",
+  "adventure",
+  "design",
+];
+
+// --- Main API Fetch Function ---
+document
+  .getElementById("fetch-word-button")
+  .addEventListener("click", async () => {
+    const wordDisplay = document.getElementById("word-display");
+    const definitionArea = document.getElementById("definition-area");
+    const errorDisplay = document.getElementById("error-display");
+    const button = document.getElementById("fetch-word-button");
+
+    // Reset previous states
+    wordDisplay.textContent = "Fetching...";
+    definitionArea.textContent = "";
+    errorDisplay.textContent = "";
+    button.disabled = true;
+
+    // 1. Pick a random word
+    const randomWord =
+      simpleWords[Math.floor(Math.random() * simpleWords.length)];
+
+    try {
+      // 2. Query the Dictionary API with the random word
+      const apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`;
+      const response = await fetch(apiURL);
+
+      if (!response.ok) {
+        throw new Error(`API returned status ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // The API returns an array of entries
+      const entry = data[0];
+      const word = entry.word;
+      // Grab the first definition of the first meaning (usually a noun or verb)
+      const definition = entry.meanings[0].definitions[0].definition;
+
+      // 3. Update the UI
+      wordDisplay.textContent = `Word: ${word.toUpperCase()}`;
+      definitionArea.textContent = `Definition: ${definition}`;
+    } catch (error) {
+      console.error("API Error:", error);
+      wordDisplay.textContent = "Word Lookup Failed";
+      errorDisplay.textContent = "Could not fetch definition. Try again.";
+    } finally {
+      button.disabled = false;
+    }
+  });

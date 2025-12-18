@@ -1036,6 +1036,81 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* --- Learning Corner Widget Styles --- */
+
+#learning-corner-widget {
+  /* Center the block within the container */
+  max-width: 500px;
+  margin: 0 auto 2.5rem; /* Add margin to separate it from the footer text */
+  padding: 1.5rem;
+
+  /* Apply visual style matching project cards/pricing list */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  text-align: center; /* Center the content inside the widget */
+}
+
+#learning-corner-widget h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #3b82f6; /* Use your primary color for the title */
+  border-bottom: 1px dashed rgba(226, 232, 240, 0.8);
+  padding-bottom: 0.75rem;
+}
+
+#word-display {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+#definition-area {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  min-height: 40px; /* Prevent layout shift while loading */
+}
+
+/* Button Styling (Matching your CTA buttons) */
+#fetch-word-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+
+  /* Use the hero/primary gradient */
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+#fetch-word-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+#fetch-word-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+#error-display {
+  color: #ef4444; /* Use a strong error red */
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -1298,6 +1373,20 @@ footer p {
 
   .pricing-header {
     gap: 0.5rem;
+  }
+
+  #learning-corner-widget {
+    padding: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  #learning-corner-widget h2 {
+    font-size: 1.3rem;
+  }
+
+  #word-display {
+    font-size: 1.1rem;
   }
 }
 
