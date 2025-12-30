@@ -5,6 +5,27 @@ const translations = {
     currencySymbol: "$",
     projects: [
       {
+        id: "busyBook",
+        title: "The Busy Book: Little Life Skills Lab",
+        description:
+          "Unlock a world of hands-on learning with the Little Life Skills Lab, the ultimate developmental busy book designed to foster independence, creativity, and essential life skills in toddlers and preschoolers.",
+        cover: "img/traffic-page.jpg",
+        previewTitle: "Little Life Skills Lab Busy Book - Preview",
+        images: ["img/dress-page.jpg", "img/shopping-page.jpg"],
+        previewDescription: `
+            <p>Far beyond simple matching, this custom-designed book is packed with 9 main activity pages and features over 200 reusable, high-quality velcro items that encourage fine motor skills, sequencing, and imaginative play.</p>
+            <p>Inside, your child will master critical skills through 7 engaging activity stations:</p> 
+            <ul>
+              <li>Sequencing & Order: From following step-by-step recipes in the Tiny Chef's Kitchen Lab! to correctly dialing numbers in the Number Detective: Safety Game!, your child learns critical multi-step processes.</li>
+              <li>Categorization & Life Skills: Practice essential chores like the Color Sort Laundry Basket! and master real-world tasks like sorting groceries on the List & Load Supermarket! page, teaching them about hygiene, food, and household goods.</li>
+              <li>Safety & Independence: Learn crucial routines with the Toot-Toot! My Town Commute traffic page and the Get Ready to Go! (Dressing Dash), reinforcing road safety and self-dressing order.</li>
+              <li>Imaginative Play: Ignite creativity with The Storyteller's Stage, using over 30 fantasy and nature characters to build scenes and narrate their own stories, boosting language development.</li>
+            </ul>
+          `,
+        price: "6",
+        gumroadUrl: "https://crayonandbeyond.gumroad.com/l/busy-book",
+      },
+      {
         id: "advent-kit",
         title: "Advent Calendar: 24 Days of joyful fun!",
         description:
@@ -298,6 +319,27 @@ const translations = {
     currency: "LEI",
     currencySymbol: "LEI",
     projects: [
+      {
+        id: "busyBook",
+        title: "Busy Book: Micul Laborator al deprinderilor de viață",
+        description:
+          "Deschide o lume a învățării practice cu Micul Laborator de deprinderilor de viață, cartea senzorială (busy book) supremă, concepută pentru a stimula independența, creativitatea și abilitățile esențiale de viață la preșcolari.",
+        cover: "img/traffic-page.jpg",
+        previewTitle:
+          "Micul Laborator al deprinderilor de viață - Previzualizare",
+        images: ["img/dress-page.jpg", "img/shopping-page.jpg"],
+        previewDescription: `
+<p>Depășind simpla potrivire, această carte personalizată este plină cu 9 pagini principale de activități și include peste 200 de obiecte refolosibile cu velcro de înaltă calitate care încurajează motricitatea fină, ordinea și jocul imaginativ.</p>
+            <p>În interior, copilul tău va stăpâni abilități cruciale prin 7 stații de activitate captivante:</p> 
+            <ul>
+              <li>Secvențiere și Ordine: De la urmărirea pas cu pas a rețetelor în Laboratorul Micului Chef! la formarea corectă a numerelor în Detectivul Numerelor: Joc de Siguranță!, copilul tău învață procese critice în mai multe etape.</li>
+              <li>Categorizare și Abilități de Viață: Exersați sarcini esențiale precum Sortarea Culoare la Coșul de Rufe! și stăpâniți sarcini din lumea reală, cum ar fi sortarea cumpărăturilor pe pagina Listă și Încărcă Supermarketul!, învățând despre igienă, alimente și produse de uz casnic.</li>
+              <li>Siguranță și Independență: Învață rutine cruciale cu pagina de trafic TitTit! Naveta Mea prin Oraș și Pregătește-te de Plecare! (Cursa de Îmbrăcare), consolidând siguranța rutieră și ordinea auto-îmbrăcării.</li>
+              <li>Jocul Imaginativ: Aprinde creativitatea cu Scena Povestitorului, folosind peste 30 de personaje fantastice și din natură pentru a construi scene și a-și nara propriile povești, stimulând dezvoltarea limbajului.</li>
+            </ul>
+          `,
+        price: "Coming soon!",
+      },
       {
         id: "advent-kit",
         title: "Advent Calendar: 24 de zile vesele și distractive",
