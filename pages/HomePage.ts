@@ -132,7 +132,7 @@ export class HomePage {
 
   async assertAllProjectsVisible() {
     // assert total number of projects
-    const expectedProjectCount = 10;
+    const expectedProjectCount = 11;
     await expect(this.projectCards).toHaveCount(expectedProjectCount);
 
     //assert each project card is visible
