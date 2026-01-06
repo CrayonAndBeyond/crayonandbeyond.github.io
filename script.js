@@ -329,13 +329,13 @@ const translations = {
           "Micul Laborator al deprinderilor de viață - Previzualizare",
         images: ["img/dress-page.jpg", "img/shopping-page.jpg"],
         previewDescription: `
-<p>Depășind simpla potrivire, această carte personalizată este plină cu 9 pagini principale de activități și include peste 200 de obiecte refolosibile cu velcro de înaltă calitate care încurajează motricitatea fină, ordinea și jocul imaginativ.</p>
-            <p>În interior, copilul tău va stăpâni abilități cruciale prin 7 stații de activitate captivante:</p> 
+            <p>Mai mult decât simpla potrivire, această carte conține 9 pagini principale de activități și peste 200 de obiecte refolosibile cu velcro de înaltă calitate care încurajează motricitatea fină, ordinea și jocul imaginativ.</p>
+            <p>În interior, copilul tău va stăpâni abilități cruciale prin 7 pagini cu activități captivante:</p> 
             <ul>
               <li>Secvențiere și Ordine: De la urmărirea pas cu pas a rețetelor în Laboratorul Micului Chef! la formarea corectă a numerelor în Detectivul Numerelor: Joc de Siguranță!, copilul tău învață procese critice în mai multe etape.</li>
-              <li>Categorizare și Abilități de Viață: Exersați sarcini esențiale precum Sortarea Culoare la Coșul de Rufe! și stăpâniți sarcini din lumea reală, cum ar fi sortarea cumpărăturilor pe pagina Listă și Încărcă Supermarketul!, învățând despre igienă, alimente și produse de uz casnic.</li>
+              <li>Categorizare și Abilități de Viață: Exersați sarcini esențiale precum Sortarea colorilor în Coșul de Rufe și stăpâniți sarcini din lumea reală, cum ar fi sortarea cumpărăturilor pe pagina Enumeră și Încărcă Supermarketul!, învățând despre igienă, alimente și produse de uz casnic.</li>
               <li>Siguranță și Independență: Învață rutine cruciale cu pagina de trafic TitTit! Naveta Mea prin Oraș și Pregătește-te de Plecare! (Cursa de Îmbrăcare), consolidând siguranța rutieră și ordinea auto-îmbrăcării.</li>
-              <li>Jocul Imaginativ: Aprinde creativitatea cu Scena Povestitorului, folosind peste 30 de personaje fantastice și din natură pentru a construi scene și a-și nara propriile povești, stimulând dezvoltarea limbajului.</li>
+              <li>Jocul Imaginativ: Aprinde creativitatea cu Scena Povestitorului, folosind peste 20 de personaje fantastice și din natură pentru a construi scene și a-și nara propriile povești, stimulând dezvoltarea limbajului.</li>
             </ul>
           `,
         price: "Coming soon!",
@@ -921,8 +921,8 @@ function initSmoothScroll() {
 // Intersection Observer for Scroll Animations
 function initIntersectionObserver() {
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px",
+    threshold: 0.05,
+    rootMargin: "0px 0px 0px 0px",
   };
 
   const observer = new IntersectionObserver((entries) => {
