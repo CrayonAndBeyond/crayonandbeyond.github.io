@@ -844,16 +844,16 @@ function showPreview(projectId) {
 
     // Calculate the correct top position
     const targetPosition =
-      projectCard.getBoundingClientRect().top + // Element's top relative to viewport
-      window.pageYOffset - // Current page scroll Y
-      headerHeight - // Offset for the fixed header
-      10; // A 10px top margin for spacing
+      projectCard.getBoundingClientRect().top +
+      window.pageYOffset -
+      headerHeight -
+      10;
 
     window.scrollTo({
       top: targetPosition,
       behavior: "smooth",
     });
-  }, 100); // The 100ms delay is good, it lets the classes apply first
+  }, 100);
 }
 
 function closePreview(projectId) {
@@ -1004,7 +1004,7 @@ function formatPrice(price, currency) {
 }
 
 // Learning corner functionality for API testing
-// --- Word List for Random Selection (keep this simple and educational) ---
+// --- Word List for Random Selection ---
 const simpleWords = [
   "curious",
   "imagine",
